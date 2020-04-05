@@ -1,5 +1,17 @@
+import fs from 'fs'
+
+const blogSlugs = fs
+  .readdirSync('./content/blog')
+  .map((file) => file.replace('.md', ''))
+
+console.log('blogSlugs', blogSlugs)
+
 export default {
   mode: 'universal',
+  generate: {
+    // routes: [].concat(blogs.map((blog) => `/blog/${blog.slug}`))
+    routes: blogSlugs
+  },
   /*
    ** Headers of the page
    */
@@ -58,6 +70,15 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      // Add this to your build config
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+        options: {
+          vue: true
+        }
+      })
+    }
   }
 }
