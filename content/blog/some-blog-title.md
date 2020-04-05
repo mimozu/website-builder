@@ -16,3 +16,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. **Aliter homines, alite
 De malis autem et bonis ab iis animalibus, quae nondum depravata sint, ait optime iudicari. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. **Tibi hoc incredibile, quod beatissimum.** **Summum ením bonum exposuit vacuitatem doloris;** Etsi ea quidem, quae adhuc dixisti, quamvis ad aetatem recte isto modo dicerentur.
 
 Te enim iudicem aequum puto, modo quae dicat ille bene noris. *Stoici scilicet.* Sed quanta sit alias, nunc tantum possitne esse tanta. Theophrastus mediocriterne delectat, cum tractat locos ab Aristotele ante tractatos? An est aliquid per se ipsum flagitiosum, etiamsi nulla comitetur infamia? *Sed ille, ut dixi, vitiose.* **Beatus autem esse in maximarum rerum timore nemo potest.** Occultum facinus esse potuerit, gaudebit;
+
+Added some new text.
