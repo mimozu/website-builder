@@ -9,8 +9,8 @@ console.log('blogSlugs', blogSlugs)
 export default {
   mode: 'universal',
   generate: {
-    // routes: [].concat(blogs.map((blog) => `/blog/${blog.slug}`))
-    routes: blogSlugs
+    routes: [].concat(blogSlugs.map((blog) => `/blog/${blog}`))
+    // routes: blogSlugs
   },
   /*
    ** Headers of the page
