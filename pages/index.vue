@@ -2,10 +2,11 @@
   <div class="container">
     <div>
       <h1 class="title">
-        { title }
+        {{ title }}
       </h1>
-      <div v-html="html"></div>
     </div>
+    <p>{{ intro }}</p>
+    <div v-html="html"></div>
   </div>
 </template>
 
@@ -15,10 +16,11 @@ export default {
     const post = await import(`~/content/homepage.md`)
     const attr = post.attributes
 
-    const { title } = attr
+    const { title, intro } = attr
 
     return {
       title,
+      intro,
       html: post.html
     }
   }
