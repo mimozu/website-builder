@@ -2,11 +2,9 @@
   <div class="container">
     <div>
       <h1 class="title">
-        netlify-cms-nuxt-starter-template
+        { title }
       </h1>
-      <h2 class="subtitle">
-        My marvelous Nuxt.js project
-      </h2>
+      <div v-html="html"></div>
     </div>
   </div>
 </template>
