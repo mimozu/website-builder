@@ -5,7 +5,6 @@
         {{ title }}
       </h3>
     </div>
-    <p>{{ intro }}</p>
     <p>
       v-html:
     </p>
@@ -20,11 +19,10 @@ export default {
     const post = await import(`~/content/homepage.md`)
     const attr = post.attributes
 
-    const { title, intro } = attr
+    const { title } = attr
 
     return {
       title,
-      intro,
       html: post.html
     }
   }
