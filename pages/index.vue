@@ -5,11 +5,7 @@
         {{ title }}
       </h3>
     </div>
-    <p>
-      v-html:
-    </p>
     <div v-html="html"></div>
-    <p>html: {{ html }}</p>
   </div>
 </template>
 
