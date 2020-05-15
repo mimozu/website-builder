@@ -12,8 +12,18 @@ collections:
         name: 'homepage'
         file: 'content/homepage.md'
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
+          - {
+              label: Title,
+              name: title,
+              widget: string,
+              hint: 'Enter your name or your company name',
+            }
+          - {
+              label: Intro,
+              name: body,
+              widget: markdown,
+              hint: 'Enter a description about yourself',
+            }
 
   - name: 'blog'
     label: 'Blog'

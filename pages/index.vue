@@ -1,12 +1,16 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
+      <h3 class="title">
         {{ title }}
-      </h1>
+      </h3>
     </div>
     <p>{{ intro }}</p>
+    <p>
+      v-html:
+    </p>
     <div v-html="html"></div>
+    <p>html: {{ html }}</p>
   </div>
 </template>
 
