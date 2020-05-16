@@ -33,7 +33,7 @@ collections:
 
   - name: 'blog'
     label: 'Blog'
-    folder: 'content
+    folder: 'content'
     create: true
     slug: '{{slug}}'
     sort: 'date:desc'
