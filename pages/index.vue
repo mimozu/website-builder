@@ -13,6 +13,7 @@
 export default {
   async asyncData({ params }) {
     const post = await import(`~/content/homepage.md`)
+    console.log('post', post)
     const attr = post.attributes
 
     const { title } = attr
