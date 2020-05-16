@@ -28,12 +28,12 @@ collections:
               label: Photo,
               name: file,
               widget: file,
-              default: 'static/images/uploads/jump.jpg',
+              default: '/images/uploads/jump.jpg',
             }
 
   - name: 'blog'
     label: 'Blog'
-    folder: 'content/blog'
+    folder: 'content
     create: true
     slug: '{{slug}}'
     sort: 'date:desc'
