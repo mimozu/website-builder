@@ -2,7 +2,7 @@
   <section class="post">
     <h1>{{ title }}</h1>
     <img v-lazy="thumbnail" class="thumbnail" :alt="title" />
-    <div class="post-content" v-html="html"></div>
+    <div v-html="html"></div>
   </section>
 </template>
 
