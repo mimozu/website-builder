@@ -24,6 +24,12 @@ collections:
               widget: markdown,
               hint: 'Enter a description about yourself',
             }
+          - {
+              label: Photo,
+              name: file,
+              widget: file,
+              default: 'static/images/uploads/jump.jpg',
+            }
 
   - name: 'blog'
     label: 'Blog'
