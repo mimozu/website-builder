@@ -9,5 +9,4 @@ intro: "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit. Sed tamen
   melius nos veriusque quam Stoici.*"
 file: /images/uploads/balance.jpg
 ---
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae cum dixisset paulumque institisset, Quid est? _Duo Reges: constructio interrete._ Inde sermone vario sex illa a Dipylo stadia confecimus. Hoc est non modo cor non habere, sed ne palatum quidem. [Sed quod proximum fuit non vidit.](http://loripsum.net/) Nunc omni virtuti vitium contrario nomine opponitur. **Quid iudicant sensus?** Sed ad haec, nisi molestum est, habeo quae velim. Nunc omni virtuti vitium contrario nomine opponitur. Sed residamus, inquit, si placet. In eo autem voluptas omnium Latine loquentium more ponitur, cum percipitur ea, quae sensum aliquem moveat, iucunditas. Quem Tiberina descensio festo illo die tanto gaudio affecit, quanto L.
+**Quid iudicant sensus?** Sed ad haec, nisi molestum est, habeo quae velim. Nunc omni virtuti vitium contrario nomine opponitur. Sed residamus, inquit, si placet. In eo autem voluptas omnium Latine loquentium more ponitur, cum percipitur ea, quae sensum aliquem moveat, iucunditas. Quem Tiberina descensio festo illo die tanto gaudio affecit, quanto L.
