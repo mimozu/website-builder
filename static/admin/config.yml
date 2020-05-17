@@ -13,6 +13,7 @@ collections:
     files:
       - label: 'Homepage'
         name: 'homepage'
+        description: 'A description of the homepage'
         file: 'content/homepage.md'
         preview_path: '/'
         editor:
