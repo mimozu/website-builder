@@ -20,17 +20,18 @@ collections:
               label: Title,
               name: title,
               widget: string,
-              hint: 'Enter your name or your company name, https://learningbtc.com',
+              hint: 'Enter your name or your company name.',
             }
           - {
               label: Intro,
               name: body,
               widget: markdown,
-              hint: 'Enter a description about yourself',
+              hint: 'Enter a description about yourself.',
             }
           - {
               label: Photo,
               name: file,
               widget: file,
               default: '/images/uploads/jump.jpg',
+              hint: 'Select a photo that will be displayed to fill your screen.',
             }
