@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: master
 publish_mode: editorial_workflow
+site_url: https://fervent-bardeen-0b318e.netlify.app
 display_url: https://fervent-bardeen-0b318e.netlify.app
 logo_url: https://fervent-bardeen-0b318e.netlify.app/images/logo.svg
 media_folder: 'static/images/uploads'
@@ -13,6 +14,7 @@ collections:
       - label: 'Homepage'
         name: 'homepage'
         file: 'content/homepage.md'
+        preview_path: '/'
         editor:
           preview: false
         fields:
