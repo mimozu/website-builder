@@ -1,11 +1,14 @@
 <template>
-  <div class="container">
-    <div>
-      <h3 class="title">
-        {{ title }}
-      </h3>
-    </div>
-    <div v-html="html"></div>
+  <div class="hero">
+    <img class="hero__img" :src="file" alt="test" />
+    <!-- <div class="container">
+      <div>
+        <h3 class="title">
+          {{ title }}
+        </h3>
+      </div>
+      <div v-html="html"></div>
+    </div> -->
   </div>
 </template>
 
@@ -16,10 +19,11 @@ export default {
     console.log('post', post)
     const attr = post.attributes
 
-    const { title } = attr
+    const { title, file } = attr
 
     return {
       title,
+      file,
       html: post.html
     }
   }
@@ -27,6 +31,21 @@ export default {
 </script>
 
 <style>
+.hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;

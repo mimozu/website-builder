@@ -4,8 +4,6 @@ const blogSlugs = fs
   .readdirSync('./content/blog')
   .map((file) => file.replace('.md', ''))
 
-console.log('blogSlugs', blogSlugs)
-
 export default {
   mode: 'universal',
   generate: {
