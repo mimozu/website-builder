@@ -10,14 +10,14 @@ public_folder: '/images/uploads'
 collections:
   - label: 'Pages'
     name: 'pages'
+    editor:
+      preview: false
     files:
       - label: 'Homepage'
         name: 'homepage'
         description: 'A description of the homepage'
         file: 'content/homepage.md'
         preview_path: '/'
-        editor:
-          preview: false
         fields:
           - {
               label: Title,
