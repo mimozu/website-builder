@@ -7,6 +7,8 @@ intro: "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit. Sed tamen
   voluptas sit summa, non esse in voluptate dolor sit maximus? Et hunc idem
   dico, inquieta sed ad virtutes et ad vitia nihil interesse. *Multoque hoc
   melius nos veriusque quam Stoici.*"
+sitetitle: Sara Lamar
+tagline: Yoga is for everybody. Want to join by building a strong and flexible body?
 file: /images/uploads/roman-laschov-yoga.jpg
 ---
 **Quid iudicant sensus?** Sed ad haec, nisi molestum est, habeo quae velim. Nunc omni virtuti vitium contrario nomine opponitur. In eo autem voluptas omnium Latine loquentium more ponitur, cum percipitur ea, quae sensum aliquem moveat, iucunditas.
