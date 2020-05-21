@@ -4,7 +4,7 @@
       <img class="hero__img" :src="file" alt="test" />
       <div class="hero__content">
         <h3 class="title">
-          {{ title }}
+          {{ tagline }}
         </h3>
       </div>
     </div>
@@ -17,10 +17,11 @@ export default {
   async asyncData({ params }) {
     const post = await import(`~/content/homepage.md`)
     const attr = post.attributes
-    const { title, file } = attr
+    const { title, tagline, file } = attr
 
     return {
       title,
+      tagline,
       file,
       html: post.html
     }

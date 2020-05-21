@@ -20,16 +20,22 @@ collections:
         preview_path: '/'
         fields:
           - {
-              label: Title,
-              name: title,
+              label: Site Title,
+              name: sitetitle,
               widget: string,
-              hint: 'Enter your name or your company name.',
+              hint: 'Enter your name/company name/product name.',
+            }
+          - {
+              label: Tagline,
+              name: tagline,
+              widget: string,
+              hint: 'Enter a very short goal.',
             }
           - {
               label: Intro,
               name: body,
               widget: markdown,
-              hint: 'Enter a description about yourself.',
+              hint: 'Enter a description about yourself/company/product.',
             }
           - {
               label: Photo,
