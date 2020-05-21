@@ -1,5 +1,5 @@
 ---
-title: John Doe, freelance front-end developer
+title: Yoga is for everybody. Are you ready to build a strong and flexible body?
 intro: "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit. Sed tamen
   enitar et, si minus multa mihi occurrent, non fugiam ista popularia. *Qui non
   moveatur et offensione turpitudinis et comprobatione honestatis?* Idem iste,
