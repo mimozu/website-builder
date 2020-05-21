@@ -1,14 +1,14 @@
 <template>
-  <div class="hero">
-    <img class="hero__img" :src="file" alt="test" />
-    <!-- <div class="container">
-      <div>
+  <div>
+    <div class="hero">
+      <img class="hero__img" :src="file" alt="test" />
+      <div class="hero__content">
         <h3 class="title">
           {{ title }}
         </h3>
       </div>
-      <div v-html="html"></div>
-    </div> -->
+    </div>
+    <div class="text"><div v-html="html"></div></div>
   </div>
 </template>
 
@@ -16,9 +16,7 @@
 export default {
   async asyncData({ params }) {
     const post = await import(`~/content/homepage.md`)
-    console.log('post', post)
     const attr = post.attributes
-
     const { title, file } = attr
 
     return {
@@ -32,27 +30,26 @@ export default {
 
 <style>
 .hero {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  pointer-events: none;
+  position: relative;
 }
 
 .hero__img {
+  display: block;
   width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
-.container {
-  margin: 0 auto;
+.hero__content {
+  position: absolute;
+  top: 0;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  color: #ffffff;
 }
 
 .title {
@@ -60,20 +57,27 @@ export default {
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  font-size: 2rem;
   letter-spacing: 1px;
+  color: #57332d;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.text {
+  min-height: 50vh;
+  padding: 48px 24px;
+  background-color: #886961;
+  color: #cdbbb4;
 }
 
-.links {
-  padding-top: 15px;
+@media (min-width: 700px) {
+  .hero__img {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero__img {
+    height: 90vh;
+  }
 }
 </style>
