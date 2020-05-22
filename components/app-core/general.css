@@ -1,0 +1,25 @@
+@import './settings.css';
+@import './fonts-general.css';
+@import './css-defaults-general.css';
+
+html {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 100%;
+  color: black;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+a {
+  color: #333;
+  text-decoration: underline;
+}
+
+strong,
+b,
+dt {
+  font-weight: 600;
+}

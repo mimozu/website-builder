@@ -33,7 +33,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['./components/app-core/index.css'],
   /*
    ** Plugins to load before mounting the App
    */
