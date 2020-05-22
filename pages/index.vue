@@ -56,8 +56,9 @@
       </header>
 
       <img class="hero__img" :src="file" alt="test" />
+      <div class="hero__readable"></div>
       <div class="hero__content">
-        <h3 class="hero__title">
+        <h3 class="hero__tagline">
           {{ tagline }}
         </h3>
       </div>
@@ -95,6 +96,7 @@ export default {
 .flat-list__item {
   flex: 0 0 10%;
   margin-left: 12px;
+  max-width: 24px;
 }
 
 .flat-list__item svg {
@@ -117,6 +119,14 @@ export default {
   font-size: 1.1rem;
 }
 
+.hero__readable {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.18);
+}
+
 .hero__img {
   display: block;
   width: 100%;
@@ -125,7 +135,6 @@ export default {
 }
 
 .hero__content {
-  display: none;
   position: absolute;
   top: 0;
   min-height: 100vh;
@@ -143,18 +152,22 @@ export default {
 }
 
 .hero__tagline {
+  margin-top: 72px;
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 2rem;
+  max-width: 310px;
   letter-spacing: 1px;
-  color: #57332d;
+  color: #fff;
 }
 
 .text {
   min-height: 50vh;
   padding: 48px 20px;
+  font-size: 1.2rem;
+  line-height: 1.45;
   background-color: #886961;
   color: #cdbbb4;
 }
@@ -162,6 +175,12 @@ export default {
 @media (min-width: 800px) {
   .hero__img {
     height: 100vh;
+    /* object-position: 100% 25%; */
+  }
+
+  .hero__tagline {
+    max-width: 500px;
+    font-size: 3rem;
   }
 }
 
