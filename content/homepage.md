@@ -9,6 +9,7 @@ intro: "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit. Sed tamen
   melius nos veriusque quam Stoici.*"
 sitetitle: Sara Jordan
 tagline: Yoga is for everybody. Want to build a strong and flexible body?
+buttontext: Let's Get In Touch
 file: /images/uploads/roman-laschov-yoga.jpg
 ---
 **Quid iudicant sensus?** Sed ad haec, nisi molestum est, habeo quae velim. Nunc omni virtuti vitium contrario nomine opponitur. In eo autem voluptas omnium Latine loquentium more ponitur, cum percipitur ea, quae sensum aliquem moveat, iucunditas.
