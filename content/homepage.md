@@ -8,7 +8,7 @@ intro: "**Lorem ipsum dolor sit amet**, consectetur adipiscing elit. Sed tamen
   dico, inquieta sed ad virtutes et ad vitia nihil interesse. *Multoque hoc
   melius nos veriusque quam Stoici.*"
 sitetitle: Sara Jordan
-tagline: Yoga is for everybody. Want to build a strong and flexible body?
+tagline: Yoga is for everybody. Want to build a **strong** and **flexible** body?
 buttontext: Let's Get In Touch
 file: /images/uploads/roman-laschov-yoga.jpg
 ---
