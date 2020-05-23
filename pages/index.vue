@@ -76,8 +76,11 @@
     </section>
 
     <div class="text">
-      <div v-html="html" class="text__button"></div>
-      <a href="mailto:test@test.com" class="button">{{ buttontext }}</a>
+      <!-- eslint-disable-next-line -->
+      <div v-html="intro" class="text__intro"></div>
+      <a href="mailto:test@test.com" class="text__button button">{{
+        buttontext
+      }}</a>
     </div>
   </div>
 </template>
@@ -85,16 +88,22 @@
 <script>
 export default {
   async asyncData({ params }) {
-    const post = await import(`~/content/homepage.md`)
-    const attr = post.attributes
-    const { sitetitle, tagline, buttontext, file } = attr
+    try {
+      const post = await import(`~/content/homepage.md`)
+      console.log('post', post)
+      const attr = post.attributes
+      const { sitetitle, tagline, buttontext, file } = attr
 
-    return {
-      sitetitle,
-      tagline,
-      buttontext,
-      file,
-      html: post.html
+      return {
+        sitetitle,
+        tagline,
+        buttontext,
+        file,
+        intro: post.html
+      }
+    } catch (error) {
+      console.error(error)
+      return false
     }
   }
 }
@@ -201,6 +210,10 @@ export default {
   line-height: 1.45;
   background-color: #886961;
   color: #cdbbb4;
+}
+
+.text__intro {
+  margin-bottom: 48px;
 }
 
 .text__button {
