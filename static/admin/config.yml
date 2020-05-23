@@ -28,7 +28,7 @@ collections:
           - {
               label: Tagline,
               name: tagline,
-              widget: string,
+              widget: markdown,
               hint: 'Enter a short goal.',
             }
           - {
