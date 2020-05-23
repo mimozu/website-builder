@@ -6,12 +6,16 @@
         <ul class="flat-list">
           <li class="flat-list__item">
             <svg
+              class="icon-linkedin"
               role="img"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>LinkedIn icon</title>
               <path
+                class="icon-linkedin__path"
                 d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
               />
             </svg>
@@ -19,6 +23,8 @@
           <li class="flat-list__item">
             <svg
               role="img"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -31,6 +37,8 @@
           <li class="flat-list__item">
             <svg
               role="img"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -43,6 +51,8 @@
           <li class="flat-list__item">
             <svg
               role="img"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -57,13 +67,18 @@
 
       <img class="hero__img" :src="file" alt="test" />
       <div class="hero__readable"></div>
+
       <div class="hero__content">
         <h3 class="hero__tagline">
           {{ tagline }}
         </h3>
       </div>
     </section>
-    <div class="text"><div v-html="html"></div></div>
+
+    <div class="text">
+      <div v-html="html" class="text__button"></div>
+      <a href="mailto:test@test.com" class="button">{{ buttontext }}</a>
+    </div>
   </div>
 </template>
 
@@ -72,11 +87,12 @@ export default {
   async asyncData({ params }) {
     const post = await import(`~/content/homepage.md`)
     const attr = post.attributes
-    const { sitetitle, tagline, file } = attr
+    const { sitetitle, tagline, buttontext, file } = attr
 
     return {
       sitetitle,
       tagline,
+      buttontext,
       file,
       html: post.html
     }
@@ -85,22 +101,36 @@ export default {
 </script>
 
 <style>
+.button {
+  display: inline-block;
+  padding: 18px 48px;
+  text-align: center;
+  background-color: rgb(28, 28, 28);
+  color: rgb(137, 113, 111);
+  font-weight: 600;
+  border: 1px solid rgb(28, 28, 28);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
 .flat-list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-basis: 50%;
+  flex-basis: 40%;
   list-style: none;
 }
 
 .flat-list__item {
-  flex: 0 0 10%;
+  flex: 0 0 16px;
   margin-left: 12px;
-  max-width: 24px;
 }
 
 .flat-list__item svg {
   display: block;
+  width: 100%;
+  height: auto;
+  max-width: 24px;
 }
 
 .hero {
@@ -124,7 +154,7 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.18);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .hero__img {
@@ -147,7 +177,8 @@ export default {
 }
 
 .hero__title {
-  flex-basis: 50%;
+  flex-basis: 60%;
+  padding-right: 12px;
   font-weight: 600;
 }
 
@@ -159,17 +190,29 @@ export default {
   font-weight: 300;
   font-size: 2rem;
   max-width: 310px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #fff;
 }
 
 .text {
   min-height: 50vh;
-  padding: 48px 20px;
+  padding: 60px 20px;
   font-size: 1.2rem;
   line-height: 1.45;
   background-color: #886961;
   color: #cdbbb4;
+}
+
+.text__button {
+  margin-bottom: 48px;
+}
+
+@media (min-width: 600px) {
+  .hero__tagline {
+    margin-left: 24px;
+    max-width: 500px;
+    font-size: 2.5rem;
+  }
 }
 
 @media (min-width: 800px) {
@@ -179,7 +222,6 @@ export default {
   }
 
   .hero__tagline {
-    max-width: 500px;
     font-size: 3rem;
   }
 }

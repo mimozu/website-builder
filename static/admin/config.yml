@@ -29,13 +29,19 @@ collections:
               label: Tagline,
               name: tagline,
               widget: string,
-              hint: 'Enter a very short goal.',
+              hint: 'Enter a short goal.',
             }
           - {
               label: Intro,
               name: body,
               widget: markdown,
               hint: 'Enter a description about yourself/company/product.',
+            }
+          - {
+              label: Button Text,
+              name: buttontext,
+              widget: string,
+              hint: 'Enter a call to action text to be displayed in a button',
             }
           - {
               label: Photo,
