@@ -86,20 +86,22 @@
 </template>
 
 <script>
+import processMarkdown from '../lib/process-markdown.js'
+
 export default {
   async asyncData({ params }) {
     try {
-      const post = await import(`~/content/homepage.md`)
-      console.log('post', post)
-      const attr = post.attributes
-      const { sitetitle, tagline, buttontext, file } = attr
+      const data = await processMarkdown()
+      console.log('data', data)
+      // const post = await import(`~/content/homepage.md`)
+      const { sitetitle, tagline, buttontext, intro, file } = data
 
       return {
         sitetitle,
         tagline,
         buttontext,
-        file,
-        intro: post.html
+        intro,
+        file
       }
     } catch (error) {
       console.error(error)

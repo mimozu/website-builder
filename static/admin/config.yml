@@ -33,7 +33,7 @@ collections:
             }
           - {
               label: Intro,
-              name: body,
+              name: intro,
               widget: markdown,
               hint: 'Enter a description about yourself/company/product.',
             }
