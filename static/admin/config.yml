@@ -20,12 +20,6 @@ collections:
         preview_path: '/'
         fields:
           - {
-              label: Site Title,
-              name: sitetitle,
-              widget: string,
-              hint: 'Enter your name/company name/product name.',
-            }
-          - {
               label: Tagline,
               name: tagline,
               widget: markdown,
@@ -50,13 +44,24 @@ collections:
               default: '/images/uploads/jump.jpg',
               hint: 'Select a photo that will be displayed to fill your screen.',
             }
-          - label: About
-            name: about
+          - label: Menu
+            name: menu
             widget: object
             fields:
-              - name: links
-                label: Links
+              - label: Site Title
+                name: sitetitle
+                widget: string
+                hint: 'Enter your name/company name/product name.'
+              - name: Social Media
+                label: socialmedia
                 widget: list
                 fields:
-                  - { name: title, label: Link text, widget: string }
-                  - { name: url, label: URL, widget: string }
+                  - label: 'Platform'
+                    name: 'socialmediaplatform'
+                    widget: 'select'
+                    options:
+                      - { label: 'Instagram', value: 'instagram' }
+                      - { label: 'Twitter', value: 'twitter' }
+                      - { label: 'Facebook', value: 'facebook' }
+                      - { label: 'YouTube', value: 'youtube' }
+                  - { name: Social media url, label: URL, widget: string }
