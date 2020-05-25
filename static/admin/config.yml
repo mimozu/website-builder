@@ -50,8 +50,13 @@ collections:
               default: '/images/uploads/jump.jpg',
               hint: 'Select a photo that will be displayed to fill your screen.',
             }
-          - label: 'Gallery'
-            name: 'galleryImages'
-            widget: 'list'
-            summary: '{{fields.string}}'
-            field: { label: Social Media, name: socialmedia, widget: string }
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - name: links
+                label: Links
+                widget: list
+                fields:
+                  - { name: title, label: Link text, widget: string }
+                  - { name: url, label: URL, widget: string }
