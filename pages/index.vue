@@ -69,9 +69,7 @@
       <div class="hero__readable"></div>
 
       <div class="hero__content">
-        <h3 class="hero__tagline">
-          {{ tagline }}
-        </h3>
+        <h3 class="hero__tagline" v-html="tagline"></h3>
       </div>
     </section>
 
@@ -92,8 +90,6 @@ export default {
   async asyncData({ params }) {
     try {
       const data = await processMarkdown()
-      console.log('data', data)
-      // const post = await import(`~/content/homepage.md`)
       const { sitetitle, tagline, buttontext, intro, file } = data
 
       return {
@@ -112,6 +108,19 @@ export default {
 </script>
 
 <style>
+html {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 24px;
+}
+
+strong {
+  font-weight: 600;
+}
+
 .button {
   display: inline-block;
   padding: 18px 48px;
