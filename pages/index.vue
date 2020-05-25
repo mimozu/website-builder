@@ -99,9 +99,6 @@ strong {
   min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   color: #ffffff;
 }
 
@@ -110,7 +107,7 @@ strong {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2rem;
   max-width: 310px;
   letter-spacing: 0.5px;
