@@ -19,6 +19,28 @@ collections:
         file: 'content/homepage.md'
         preview_path: '/'
         fields:
+          - label: Menu
+            name: menu
+            widget: object
+            fields:
+              - label: Site Title
+                name: sitetitle
+                widget: string
+                hint: 'Enter your name/company name/product name.'
+              - name: Social Media
+                label: socialmedia
+                widget: list
+                fields:
+                  - label: 'Platform'
+                    name: 'socialmediaplatform'
+                    widget: 'select'
+                    options:
+                      - { label: 'Instagram', value: 'instagram' }
+                      - { label: 'Twitter', value: 'twitter' }
+                      - { label: 'Facebook', value: 'facebook' }
+                      - { label: 'YouTube', value: 'youtube' }
+                  - { name: Social media url, label: URL, widget: string }
+
           - {
               label: Tagline,
               name: tagline,
@@ -44,24 +66,3 @@ collections:
               default: '/images/uploads/jump.jpg',
               hint: 'Select a photo that will be displayed to fill your screen.',
             }
-          - label: Menu
-            name: menu
-            widget: object
-            fields:
-              - label: Site Title
-                name: sitetitle
-                widget: string
-                hint: 'Enter your name/company name/product name.'
-              - name: Social Media
-                label: socialmedia
-                widget: list
-                fields:
-                  - label: 'Platform'
-                    name: 'socialmediaplatform'
-                    widget: 'select'
-                    options:
-                      - { label: 'Instagram', value: 'instagram' }
-                      - { label: 'Twitter', value: 'twitter' }
-                      - { label: 'Facebook', value: 'facebook' }
-                      - { label: 'YouTube', value: 'youtube' }
-                  - { name: Social media url, label: URL, widget: string }
