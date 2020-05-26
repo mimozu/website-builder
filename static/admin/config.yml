@@ -27,19 +27,19 @@ collections:
                 name: sitetitle
                 widget: string
                 hint: 'Enter your name/company name/product name.'
-              - name: Social Media
+              - name: socialmedia
                 label: socialmedia
                 widget: list
                 fields:
                   - label: 'Platform'
-                    name: 'socialmediaplatform'
+                    name: 'platform'
                     widget: 'select'
                     options:
                       - { label: 'Instagram', value: 'instagram' }
                       - { label: 'Twitter', value: 'twitter' }
                       - { label: 'Facebook', value: 'facebook' }
                       - { label: 'YouTube', value: 'youtube' }
-                  - { name: Social media url, label: URL, widget: string }
+                  - { name: url, label: URL, widget: string }
 
           - {
               label: Tagline,
