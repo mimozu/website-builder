@@ -28,7 +28,7 @@ collections:
                 widget: string
                 hint: 'Enter your name/company name/product name.'
               - name: socialmedia
-                label: socialmedia
+                label: Social Media
                 widget: list
                 fields:
                   - label: 'Platform'
