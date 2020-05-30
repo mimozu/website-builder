@@ -19,28 +19,23 @@ collections:
         file: 'content/homepage.md'
         preview_path: '/'
         fields:
-          - label: Menu
-            name: menu
-            widget: object
+          - label: Site Title
+            name: sitetitle
+            widget: string
+            hint: 'Enter your name/company name/product name.'
+          - name: socialmedia
+            label: Social Media
+            widget: list
             fields:
-              - label: Site Title
-                name: sitetitle
-                widget: string
-                hint: 'Enter your name/company name/product name.'
-              - name: socialmedia
-                label: Social Media
-                widget: list
-                fields:
-                  - label: 'Platform'
-                    name: 'platform'
-                    widget: 'select'
-                    options:
-                      - { label: 'Instagram', value: 'instagram' }
-                      - { label: 'Twitter', value: 'twitter' }
-                      - { label: 'Facebook', value: 'facebook' }
-                      - { label: 'YouTube', value: 'youtube' }
-                  - { name: url, label: URL, widget: string }
-
+              - label: 'Platform'
+                name: 'platform'
+                widget: 'select'
+                options:
+                  - { label: 'Instagram', value: 'instagram' }
+                  - { label: 'Twitter', value: 'twitter' }
+                  - { label: 'Facebook', value: 'facebook' }
+                  - { label: 'YouTube', value: 'youtube' }
+              - { name: url, label: URL, widget: string }
           - {
               label: Tagline,
               name: tagline,
