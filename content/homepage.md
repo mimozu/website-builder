@@ -1,11 +1,10 @@
 ---
-menu:
-  sitetitle: Sara Jordan
-  socialmedia:
-    - platform: instagram
-      url: https://instagram.com/test
-    - platform: twitter
-      url: https://twitter.com/tets
+sitetitle: Sara Jordan
+socialmedia:
+  - platform: instagram
+    url: https://instagram.com/test
+  - platform: twitter
+    url: https://twitter.com/tets
 tagline: Yoga is for everybody. Want to build a **strong** and **flexible** body?
 intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Laboro autem
   non sine causa;](http://loripsum.net/) Quid enim ab antiquis ex eo genere,
