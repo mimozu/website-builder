@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header :title="sitetitle" />
+    <app-header :title="sitetitle" :socialmedia="socialmedia" />
 
     <section class="hero">
       <img class="hero__img" :src="file" alt="test" />
@@ -31,10 +31,11 @@ export default {
   async asyncData({ params }) {
     try {
       const data = await processMarkdown()
-      const { sitetitle, tagline, buttontext, intro, file } = data
+      const { sitetitle, socialmedia, tagline, buttontext, intro, file } = data
 
       return {
         sitetitle,
+        socialmedia,
         tagline,
         buttontext,
         intro,
