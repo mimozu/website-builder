@@ -7,6 +7,8 @@ socialmedia:
     url: https://twitter.com/tets
   - platform: facebook
     url: https://facebook.com/test
+  - platform: youtube
+    url: https://youtube.com/test
 tagline: Yoga is for everybody. Want to build a **strong** and **flexible** body?
 intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Laboro autem
   non sine causa;](http://loripsum.net/) Quid enim ab antiquis ex eo genere,
