@@ -23,6 +23,31 @@ collections:
             name: sitetitle
             widget: string
             hint: 'Enter your name/company name/product name.'
+          - {
+              label: Photo,
+              name: file,
+              widget: file,
+              default: '/images/uploads/jump.jpg',
+              hint: 'Select a photo that will be displayed to fill your screen.',
+            }
+          - {
+              label: Tagline,
+              name: tagline,
+              widget: markdown,
+              hint: 'Enter a short goal, which will be displayed over your selected photo.',
+            }
+          - {
+              label: Intro,
+              name: intro,
+              widget: markdown,
+              hint: 'Enter a description about yourself/company/product.',
+            }
+          - {
+              label: Button Text,
+              name: buttontext,
+              widget: string,
+              hint: 'Enter a call to action text to be displayed in a button',
+            }
           - name: socialmedia
             label: Social Media
             widget: list
@@ -38,28 +63,3 @@ collections:
                   - { label: 'Linkedin', value: 'linkedin' }
                   - { label: 'Pinterest', value: 'pinterest' }
               - { name: url, label: URL, widget: string }
-          - {
-              label: Tagline,
-              name: tagline,
-              widget: markdown,
-              hint: 'Enter a short goal.',
-            }
-          - {
-              label: Intro,
-              name: intro,
-              widget: markdown,
-              hint: 'Enter a description about yourself/company/product.',
-            }
-          - {
-              label: Button Text,
-              name: buttontext,
-              widget: string,
-              hint: 'Enter a call to action text to be displayed in a button',
-            }
-          - {
-              label: Photo,
-              name: file,
-              widget: file,
-              default: '/images/uploads/jump.jpg',
-              hint: 'Select a photo that will be displayed to fill your screen.',
-            }
