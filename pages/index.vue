@@ -19,15 +19,18 @@
         buttontext
       }}</a>
     </div>
+
+    <app-footer :socialmedia="socialmedia"></app-footer>
   </div>
 </template>
 
 <script>
 import processMarkdown from '../lib/process-markdown.js'
 import appHeader from '../components/app-header/app-header.vue'
+import appFooter from '../components/app-footer/app-footer.vue'
 
 export default {
-  components: { appHeader },
+  components: { appFooter, appHeader },
   async asyncData({ params }) {
     try {
       const data = await processMarkdown()
@@ -117,7 +120,7 @@ strong {
 
 .text {
   min-height: 50vh;
-  padding: 60px 20px;
+  padding: 60px 20px 20px 20px;
   font-size: 1.2rem;
   line-height: 1.45;
   background-color: #886961;
