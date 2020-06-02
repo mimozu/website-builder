@@ -26,12 +26,16 @@ import iconInstagram from '../icons/icon-instagram.vue'
 import iconTwitter from '../icons/icon-twitter.vue'
 import iconFacebook from '../icons/icon-facebook.vue'
 import iconYoutube from '../icons/icon-youtube.vue'
+import iconPinterest from '../icons/icon-pinterest.vue'
+import iconLinkedin from '../icons/icon-linkedin.vue'
 
 export default {
   components: {
     iconBase,
     iconFacebook,
     iconInstagram,
+    iconLinkedin,
+    iconPinterest,
     iconTwitter,
     iconYoutube
   },
