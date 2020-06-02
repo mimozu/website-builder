@@ -6,6 +6,10 @@ const blogSlugs = fs
 
 export default {
   mode: 'universal',
+  server: {
+    port: '8000',
+    host: '0.0.0.0'
+  },
   generate: {
     routes: [].concat(blogSlugs.map((blog) => `/blog/${blog}`))
     // routes: blogSlugs
@@ -72,10 +76,10 @@ export default {
       // Add this to your build config
       config.module.rules.push({
         test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        options: {
-          vue: true
-        }
+        loader: 'frontmatter-markdown-loader'
+        // options: {
+        //   vue: true
+        // }
       })
     }
   }
