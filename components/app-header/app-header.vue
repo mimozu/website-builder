@@ -7,12 +7,12 @@
         :key="index"
         class="flat-list__item"
       >
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <icon-base width="24" height="24" :icon-name="item.platform"
+        <a :href="item.url" target="_blank" rel="noopener noreferrer">
+          <icon-base
+            width="16"
+            height="16"
+            viewbox="0 0 24 24"
+            :icon-name="item.platform"
             ><component :is="`icon-${item.platform}`"></component></icon-base
         ></a>
       </li>
@@ -25,9 +25,16 @@ import iconBase from '../icon-base/icon-base.vue'
 import iconInstagram from '../icons/icon-instagram.vue'
 import iconTwitter from '../icons/icon-twitter.vue'
 import iconFacebook from '../icons/icon-facebook.vue'
+import iconYoutube from '../icons/icon-youtube.vue'
 
 export default {
-  components: { iconBase, iconFacebook, iconInstagram, iconTwitter },
+  components: {
+    iconBase,
+    iconFacebook,
+    iconInstagram,
+    iconTwitter,
+    iconYoutube
+  },
   props: {
     title: {
       type: String,

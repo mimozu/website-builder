@@ -35,6 +35,8 @@ collections:
                   - { label: 'Twitter', value: 'twitter' }
                   - { label: 'Facebook', value: 'facebook' }
                   - { label: 'YouTube', value: 'youtube' }
+                  - { label: 'Linkedin', value: 'linkedin' }
+                  - { label: 'Pinterest', value: 'pinterest' }
               - { name: url, label: URL, widget: string }
           - {
               label: Tagline,
