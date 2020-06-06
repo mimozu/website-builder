@@ -1,19 +1,10 @@
-import fs from 'fs'
-
-const blogSlugs = fs
-  .readdirSync('./content/blog')
-  .map((file) => file.replace('.md', ''))
-
 export default {
   mode: 'universal',
   server: {
     port: '8000',
     host: '0.0.0.0'
   },
-  generate: {
-    routes: [].concat(blogSlugs.map((blog) => `/blog/${blog}`))
-    // routes: blogSlugs
-  },
+  generate: {},
   /*
    ** Headers of the page
    */
@@ -58,7 +49,9 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    // Doc: https://content.nuxtjs.org/installation
+    '@nuxt/content'
   ],
   /*
    ** Axios module configuration
