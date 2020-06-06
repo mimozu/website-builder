@@ -1,48 +1,48 @@
 <template>
   <div>
-    <app-header :title="sitetitle" :socialmedia="socialmedia" />
+    <nuxt-content :document="page" />
+    <app-header :title="page.sitetitle" />
 
     <section class="hero">
-      <img class="hero__img" :src="file" alt="test" />
+      <img class="hero__img" :src="page.file" alt="test" />
       <div class="hero__readable"></div>
 
       <div class="hero__content">
         <!-- eslint-disable-next-line -->
-        <h3 class="hero__tagline" v-html="tagline"></h3>
+        <h3 class="hero__tagline" v-html="page.tagline"></h3>
       </div>
     </section>
 
     <div class="text">
       <!-- eslint-disable-next-line -->
-      <div v-html="intro" class="text__intro"></div>
+      <div v-html="page.intro" class="text__intro"></div>
       <a href="mailto:test@test.com" class="text__button button">{{
-        buttontext
+        page.buttontext
       }}</a>
     </div>
 
-    <app-footer :socialmedia="socialmedia"></app-footer>
+    <app-footer :socialmedia="page.socialmedia"></app-footer>
   </div>
 </template>
 
 <script>
-import processMarkdown from '../lib/process-markdown.js'
+// import processMarkdown from '../lib/process-markdown.js'
+import marked from 'marked'
 import appHeader from '../components/app-header/app-header.vue'
 import appFooter from '../components/app-footer/app-footer.vue'
 
 export default {
   components: { appFooter, appHeader },
-  async asyncData({ params }) {
+  async asyncData({ $content, params }) {
     try {
-      const data = await processMarkdown()
-      const { sitetitle, socialmedia, tagline, buttontext, intro, file } = data
+      const page = await $content('/homepage').fetch()
+      page.intro = marked(page.intro)
+      page.tagline = marked(page.tagline)
+      console.log('page', page)
+      // const data = await processMarkdown()
 
       return {
-        sitetitle,
-        socialmedia,
-        tagline,
-        buttontext,
-        intro,
-        file
+        page
       }
     } catch (error) {
       console.error(error)
