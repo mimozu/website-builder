@@ -26,7 +26,6 @@
 </template>
 
 <script>
-// import processMarkdown from '../lib/process-markdown.js'
 import marked from 'marked'
 import appHeader from '../components/app-header/app-header.vue'
 import appFooter from '../components/app-footer/app-footer.vue'
@@ -38,8 +37,6 @@ export default {
       const page = await $content('/homepage').fetch()
       page.intro = marked(page.intro)
       page.tagline = marked(page.tagline)
-      console.log('page', page)
-      // const data = await processMarkdown()
 
       return {
         page
