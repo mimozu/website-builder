@@ -22,7 +22,7 @@ collections:
           - label: Site Title
             name: sitetitle
             widget: string
-            hint: 'Enter your name/company name/product name.'
+            hint: 'Enter your name, company name, product name.'
           - {
               label: Photo,
               name: file,
