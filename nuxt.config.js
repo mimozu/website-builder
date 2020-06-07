@@ -4,6 +4,7 @@ export default {
     port: '8000',
     host: '0.0.0.0'
   },
+  srcDir: 'src/client',
   generate: {},
   /*
    ** Headers of the page
@@ -28,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['./components/app-core/index.css'],
+  css: ['./src/client/components/app-core/index.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -65,15 +66,5 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-      // Add this to your build config
-      config.module.rules.push({
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader'
-        // options: {
-        //   vue: true
-        // }
-      })
-    }
   }
 }
