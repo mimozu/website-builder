@@ -1,4 +1,4 @@
-import jimp from 'jimp'
+const jimp = require('jimp')
 
 module.exports = {
   onPreBuild: async ({ utils }) => {
