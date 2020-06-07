@@ -2,5 +2,5 @@
   command = "npm run generate"
   publish = "dist"
 
-[plugins]
+[[plugins]]
   package = "/src/server/plugins/netlify-plugin-hello-world"
