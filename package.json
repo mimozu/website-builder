@@ -4,6 +4,10 @@
   "description": "My marvelous Nuxt.js project",
   "author": "Anand Graves",
   "private": true,
+  "engines": {
+    "node": "12.18.0",
+    "npm": "6.14.4"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
