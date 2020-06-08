@@ -1,5 +1,5 @@
 ---
-sitetitle: Sarah Jordan
+sitetitle: Sarah Les Jordan
 file: /images/uploads/jump.jpg
 tagline: Yoga is for everybody. Want to build a **strong** and **flexible** body?
 intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Laboro autem
