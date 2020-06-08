@@ -5,9 +5,6 @@ export default {
     host: '0.0.0.0'
   },
   srcDir: 'src/client',
-  content: {
-    dir: 'src/client'
-  },
   generate: {},
   /*
    ** Headers of the page
