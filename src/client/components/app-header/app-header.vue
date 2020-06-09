@@ -24,11 +24,19 @@ export default {
 
 .app-header__title {
   font-size: 1rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 600px) {
   .app__header {
     padding-left: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app__header {
+    margin-left: 120px;
   }
 }
 </style>

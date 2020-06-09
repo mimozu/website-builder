@@ -83,34 +83,37 @@ strong {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 75vh;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .hero__img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 75vh;
   object-fit: cover;
+  object-position: 65%;
 }
 
 .hero__content {
   position: absolute;
   top: 0;
-  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  height: 75vh;
   padding-left: 20px;
   padding-right: 20px;
   color: #ffffff;
 }
 
 .hero__tagline {
-  margin-top: 36px;
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 400;
-  font-size: 2rem;
-  max-width: 310px;
+  font-size: 1.8rem;
+  width: 75%;
+  max-width: 270px;
   letter-spacing: 0.5px;
   color: #fff;
 }
@@ -133,22 +136,43 @@ strong {
   margin-bottom: 48px;
 }
 
+@media (min-width: 550px) {
+  .hero__tagline {
+    max-width: 400px;
+    font-size: 2rem;
+  }
+}
+
 @media (min-width: 600px) {
   .hero__tagline {
-    margin-left: 24px;
     max-width: 500px;
     font-size: 2.5rem;
+  }
+
+  .hero__content {
+    padding-left: 48px;
   }
 }
 
 @media (min-width: 800px) {
-  .hero__img {
+  .hero__img,
+  .hero__content,
+  .hero__readable {
     height: 100vh;
     /* object-position: 100% 25%; */
   }
 
   .hero__tagline {
-    font-size: 3rem;
+    max-width: 500px;
+    font-size: 3.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__tagline {
+    max-width: 700px;
+    margin-left: 120px;
+    font-size: 4.8rem;
   }
 }
 
