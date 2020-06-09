@@ -17,15 +17,18 @@ export default {
 
 <style>
 .app__header {
-  display: flex;
-  justify-content: center;
-  padding: 12px 20px;
-  color: #cdbbb4;
-  background-color: rgb(28, 28, 28);
+  position: absolute;
+  z-index: 1;
+  padding: 20px;
 }
 
 .app-header__title {
   font-size: 1rem;
-  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .app__header {
+    padding-left: 48px;
+  }
 }
 </style>
