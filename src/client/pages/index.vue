@@ -70,8 +70,9 @@ strong {
   background-color: rgb(28, 28, 28);
   color: rgb(137, 113, 111);
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   border: 1px solid rgb(28, 28, 28);
-  border-radius: 6px;
   text-decoration: none;
 }
 
@@ -136,10 +137,11 @@ strong {
   margin-bottom: 48px;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 450px) {
   .hero__tagline {
     max-width: 400px;
     font-size: 2rem;
+    line-height: 1.2;
   }
 }
 
