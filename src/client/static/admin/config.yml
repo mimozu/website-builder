@@ -43,10 +43,15 @@ collections:
               hint: 'Enter a description about yourself/company/product.',
             }
           - {
-              label: Button Text,
+              label: Email address,
               name: buttontext,
               widget: string,
-              hint: 'Enter a call to action text to be displayed in a button',
+              pattern:
+                [
+                  '^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$',
+                  'Enter a correct email address',
+                ],
+              hint: 'Opens an email program after clicking on the button, that has your email address prefilled.',
             }
           - name: socialmedia
             label: Social Media
