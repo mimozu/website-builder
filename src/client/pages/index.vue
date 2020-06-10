@@ -3,15 +3,11 @@
     <nuxt-content :document="page" />
     <app-header :title="page.sitetitle" />
 
-    <section class="hero">
-      <img class="hero__img" :src="page.file" alt="test" />
-      <div class="hero__readable"></div>
-
-      <div class="hero__content">
-        <!-- eslint-disable-next-line -->
-        <h3 class="hero__tagline" v-html="page.tagline"></h3>
-      </div>
-    </section>
+    <hero-image
+      :image-src="page.file"
+      :image-alt="test"
+      :tag-line="page.tagline"
+    />
 
     <div class="text">
       <!-- eslint-disable-next-line -->
@@ -29,9 +25,10 @@
 import marked from 'marked'
 import appHeader from '../components/app-header/app-header.vue'
 import appFooter from '../components/app-footer/app-footer.vue'
+import heroImage from '../components/hero-image/hero-image.vue'
 
 export default {
-  components: { appFooter, appHeader },
+  components: { appFooter, appHeader, heroImage },
   async asyncData({ $content, params }) {
     try {
       const page = await $content('/homepage').fetch()
@@ -76,49 +73,6 @@ strong {
   text-decoration: none;
 }
 
-.hero {
-  position: relative;
-}
-
-.hero__readable {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 75vh;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.hero__img {
-  display: block;
-  width: 100%;
-  height: 75vh;
-  object-fit: cover;
-  object-position: 65%;
-}
-
-.hero__content {
-  position: absolute;
-  top: 0;
-  display: flex;
-  align-items: center;
-  height: 75vh;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #ffffff;
-}
-
-.hero__tagline {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 400;
-  font-size: 1.8rem;
-  width: 75%;
-  max-width: 270px;
-  letter-spacing: 0.5px;
-  color: #fff;
-}
-
 .text {
   min-height: 50vh;
   padding: 60px 20px 20px 20px;
@@ -135,52 +89,5 @@ strong {
 .text__button {
   width: 100%;
   margin-bottom: 48px;
-}
-
-@media (min-width: 450px) {
-  .hero__tagline {
-    max-width: 400px;
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-}
-
-@media (min-width: 600px) {
-  .hero__tagline {
-    max-width: 500px;
-    font-size: 2.5rem;
-  }
-
-  .hero__content {
-    padding-left: 48px;
-  }
-}
-
-@media (min-width: 800px) {
-  .hero__img,
-  .hero__content,
-  .hero__readable {
-    height: 100vh;
-    /* object-position: 100% 25%; */
-  }
-
-  .hero__tagline {
-    max-width: 500px;
-    font-size: 3.4rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero__tagline {
-    max-width: 700px;
-    margin-left: 120px;
-    font-size: 4.8rem;
-  }
-}
-
-@media (min-width: 1600px) {
-  .hero__img {
-    height: 90vh;
-  }
 }
 </style>

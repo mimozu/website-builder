@@ -1,0 +1,122 @@
+<template>
+  <section class="hero-image">
+    <img class="hero-image__img" :src="imageSrc" :alt="imageAlt" />
+    <div class="hero-image__readable"></div>
+
+    <div class="hero-image__content">
+      <!-- eslint-disable-next-line -->
+      <h3 class="hero-image__tagline" v-html="tagLine"></h3>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  props: {
+    imageSrc: {
+      type: String,
+      required: true
+    },
+    imageAlt: {
+      type: String,
+      required: true
+    },
+    tagLine: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
+<style>
+.hero-image {
+  position: relative;
+}
+
+.hero-image__readable {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 75vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hero-image__img {
+  display: block;
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  object-position: 65%;
+}
+
+.hero-image__content {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 75vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+
+.hero-image__tagline {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 400;
+  font-size: 1.8rem;
+  width: 75%;
+  max-width: 270px;
+  letter-spacing: 0.4px;
+  color: #fff;
+}
+
+@media (min-width: 450px) {
+  .hero-image__tagline {
+    max-width: 400px;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 600px) {
+  .hero-image__tagline {
+    max-width: 500px;
+    font-size: 2.5rem;
+  }
+
+  .hero-image__content {
+    padding-left: 48px;
+  }
+}
+
+@media (min-width: 800px) {
+  .hero-image__img,
+  .hero-image__content,
+  .hero-image__readable {
+    height: 100vh;
+    /* object-position: 100% 25%; */
+  }
+
+  .hero-image__tagline {
+    max-width: 500px;
+    font-size: 3.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-image__tagline {
+    max-width: 700px;
+    margin-left: 120px;
+    font-size: 4.8rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero-image__img {
+    height: 90vh;
+  }
+}
+</style>

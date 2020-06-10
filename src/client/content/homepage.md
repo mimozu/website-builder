@@ -1,7 +1,7 @@
 ---
 sitetitle: Uphill Coaching
 file: /images/uploads/jump.jpg
-tagline: Can you handle your next big challenge?
+tagline: Can you **handle** your next big **challenge**?
 intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Laboro autem
   non sine causa;](http://loripsum.net/) Quid enim ab antiquis ex eo genere,
   quod ad disserendum valet, praetermissum est? [At eum nihili
