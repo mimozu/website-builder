@@ -46,7 +46,7 @@ collections:
               label: Button text,
               name: buttontext,
               widget: string,
-              hint: 'Enter a call to action so people can\'t resist to click your button.',
+              hint: "Enter a call to action so people can't resist to click your button.",
             }
           - {
               label: Email address,
