@@ -9,8 +9,8 @@
       :tag-line="page.tagline"
     />
 
-    <div class="footer-home__introduction">
-      <div class="page-introduction">
+    <div class="page-introduction">
+      <div class="footer-home__introduction">
         <!-- eslint-disable-next-line -->
         <div v-html="page.intro" class="page-introduction__intro"></div>
         <a
@@ -20,9 +20,7 @@
         >
       </div>
 
-      <div class="footer-home__socialmedia">
-        <app-footer :socialmedia="page.socialmedia"></app-footer>
-      </div>
+      <app-footer :socialmedia="page.socialmedia"></app-footer>
     </div>
   </div>
 </template>
@@ -53,24 +51,11 @@ export default {
 </script>
 
 <style>
-html {
-  font-family: 'Source Sans Pro';
-  font-weight: 400;
-}
-
-p {
-  margin-bottom: 24px;
-}
-
-strong {
-  font-weight: 600;
-}
-
 .button {
   display: inline-block;
   padding: 18px 48px;
   text-align: center;
-  background-color: rgb(28, 28, 28);
+  background-color: #333;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -82,14 +67,8 @@ strong {
 
 .button:hover {
   transform: scale(1.1);
-}
-
-.page-introduction {
-  margin-bottom: 120px;
-}
-
-.page-introduction__intro {
-  margin-bottom: 60px;
+  color: #fff;
+  background-color: #000;
 }
 
 .page-introduction__button {
@@ -100,16 +79,22 @@ strong {
   margin-bottom: 48px;
 }
 
-.footer-home__introduction {
-  max-width: 730px;
-  margin: 0 auto;
-  min-height: 50vh;
-  padding: 60px;
+.page-introduction {
+  max-width: 870px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  padding: 84px 60px;
+  text-align: center;
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
-.footer-home__socialmedia {
-  background-color: #fff;
+.page-introduction__intro {
+  margin-bottom: 60px;
+}
+
+.footer-home__introduction {
+  margin-bottom: 120px;
 }
 </style>

@@ -24,7 +24,8 @@ export default {
 
 .app-header__title {
   font-size: 1rem;
-  letter-spacing: 0.3px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
