@@ -9,7 +9,8 @@ intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Laboro autem
   Reges: constructio interrete. Nec hoc ille non vidit, sed verborum
   magnificentia est et gloria delectatus. **Hoc non est positum in nostra
   actione.** Item de contrariis, a quibus ad genera formasque generum venerunt."
-buttontext: bladibla@yoyo.com
+buttontext: Let's conquer your challenge!
+buttonemailaddress: hello@bladibla.com
 socialmedia:
   - platform: instagram
     url: https://instagram.com/test
