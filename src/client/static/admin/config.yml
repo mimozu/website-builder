@@ -43,8 +43,14 @@ collections:
               hint: 'Enter a description about yourself/company/product.',
             }
           - {
-              label: Email address,
+              label: Button text,
               name: buttontext,
+              widget: string,
+              hint: 'Enter a call to action so people can\'t resist to click your button.',
+            }
+          - {
+              label: Email address,
+              name: buttonemailaddress,
               widget: string,
               pattern:
                 [

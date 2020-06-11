@@ -12,7 +12,7 @@
     <div class="text">
       <!-- eslint-disable-next-line -->
       <div v-html="page.intro" class="text__intro"></div>
-      <a href="mailto:test@test.com" class="text__button button">{{
+      <a href="page.buttonemailaddress" class="text__button button">{{
         page.buttontext
       }}</a>
     </div>

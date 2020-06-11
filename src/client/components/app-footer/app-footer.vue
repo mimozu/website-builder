@@ -6,7 +6,11 @@
         :key="index"
         class="flat-list__item"
       >
-        <a :href="item.url" target="_blank" rel="noopener noreferrer">
+        <a
+          :href="platformUrl(item.platform, item.username)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <icon-base
             width="24"
             height="24"
@@ -42,6 +46,24 @@ export default {
     socialmedia: {
       type: Array,
       required: true
+    }
+  },
+  data() {
+    return {
+      urls: {
+        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
+        facebook: 'https://facebook.com',
+        pinterest: 'https://pinterest.com',
+        youtube: 'https://youtube.com',
+        linkedin: 'https://linkedin.com'
+      }
+    }
+  },
+  methods: {
+    platformUrl(platform, username) {
+      console.log(`${this.urls[platform]}/${username}`)
+      return `${this.urls[platform]}/${username}`
     }
   }
 }
