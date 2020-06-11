@@ -1,19 +1,20 @@
 <template>
   <footer class="app-footer">
-    <ul class="flat-list">
+    <ul class="app-footer__list">
       <li
         v-for="(item, index) in socialmedia"
         :key="index"
-        class="flat-list__item"
+        class="app-footer__list-item"
       >
         <a
+          class="app-footer__link"
           :href="platformUrl(item.platform, item.username)"
           target="_blank"
           rel="noopener noreferrer"
         >
           <icon-base
-            width="24"
-            height="24"
+            width="36"
+            height="36"
             viewbox="0 0 24 24"
             :icon-name="item.platform"
             ><component :is="`icon-${item.platform}`"></component></icon-base
@@ -71,21 +72,31 @@ export default {
 <style>
 .app-footer {
   padding-bottom: 72px;
-  background-color: #886961;
 }
 
-.flat-list {
+.app-footer__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
 }
 
-.flat-list__item {
-  flex: 0 0 16px;
+.app-footer__list-item {
+  flex: 0 0 60px;
 }
 
-.flat-list__item:not(:first-child) {
+.app-footer__list-item:not(:first-child) {
   margin-left: 24px;
+}
+
+.app-footer__link {
+  display: block;
+  text-align: center;
+  transform-origin: bottom;
+  transition: transform 0.1s ease;
+}
+
+.app-footer__link:hover {
+  transform: scale(1.1);
 }
 </style>

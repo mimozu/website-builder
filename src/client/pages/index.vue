@@ -9,15 +9,21 @@
       :tag-line="page.tagline"
     />
 
-    <div class="text">
-      <!-- eslint-disable-next-line -->
-      <div v-html="page.intro" class="text__intro"></div>
-      <a href="page.buttonemailaddress" class="text__button button">{{
-        page.buttontext
-      }}</a>
-    </div>
+    <div class="footer-home__introduction">
+      <div class="page-introduction">
+        <!-- eslint-disable-next-line -->
+        <div v-html="page.intro" class="page-introduction__intro"></div>
+        <a
+          :href="`mailto:${page.buttonemailaddress}`"
+          class="page-introduction__button button"
+          >{{ page.buttontext }}</a
+        >
+      </div>
 
-    <app-footer :socialmedia="page.socialmedia"></app-footer>
+      <div class="footer-home__socialmedia">
+        <app-footer :socialmedia="page.socialmedia"></app-footer>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -65,29 +71,45 @@ strong {
   padding: 18px 48px;
   text-align: center;
   background-color: rgb(28, 28, 28);
-  color: rgb(137, 113, 111);
+  color: #fff;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   border: 1px solid rgb(28, 28, 28);
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
-.text {
+.button:hover {
+  transform: scale(1.1);
+}
+
+.page-introduction {
+  margin-bottom: 120px;
+}
+
+.page-introduction__intro {
+  margin-bottom: 60px;
+}
+
+.page-introduction__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  margin-bottom: 48px;
+}
+
+.footer-home__introduction {
+  max-width: 730px;
+  margin: 0 auto;
   min-height: 50vh;
-  padding: 60px 20px 20px 20px;
-  font-size: 1.2rem;
-  line-height: 1.45;
-  background-color: #886961;
-  color: #cdbbb4;
+  padding: 60px;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
-.text__intro {
-  margin-bottom: 48px;
-}
-
-.text__button {
-  width: 100%;
-  margin-bottom: 48px;
+.footer-home__socialmedia {
+  background-color: #fff;
 }
 </style>
