@@ -31,7 +31,7 @@ export default {
   components: { appFooter, appHeader, heroImage },
   async asyncData({ $content, params }) {
     try {
-      const page = await $content('/homepage').fetch()
+      const page = await $content('homepage').fetch()
       page.intro = marked(page.intro)
       page.tagline = marked(page.tagline)
 
