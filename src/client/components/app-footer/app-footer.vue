@@ -62,7 +62,6 @@ export default {
   },
   methods: {
     platformUrl(platform, username) {
-      console.log(`${this.urls[platform]}/${username}`)
       return `${this.urls[platform]}/${username}`
     }
   }
