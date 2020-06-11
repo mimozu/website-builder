@@ -5,7 +5,7 @@
 
     <hero-image
       :image-src="page.file"
-      :image-alt="test"
+      :image-alt="page.filedescription"
       :tag-line="page.tagline"
     />
 

@@ -30,6 +30,10 @@ collections:
               default: '/images/uploads/jump.jpg',
               hint: 'Select a photo that will be displayed to fill your screen.',
             }
+          - label: Photo Description
+            name: filedescription
+            widget: string
+            hint: 'Describe the photo. This text can be displayed in Google and social media search results.'
           - {
               label: Tagline,
               name: tagline,
@@ -43,13 +47,13 @@ collections:
               hint: 'Enter a description about yourself/company/product.',
             }
           - {
-              label: Button text,
+              label: Button Text,
               name: buttontext,
               widget: string,
               hint: "Enter a call to action so people can't resist to click your button.",
             }
           - {
-              label: Email address,
+              label: Email Address,
               name: buttonemailaddress,
               widget: string,
               pattern:
