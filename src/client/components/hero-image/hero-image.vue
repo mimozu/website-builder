@@ -5,7 +5,7 @@
 
     <div class="hero-image__content">
       <!-- eslint-disable-next-line -->
-      <h3 class="hero-image__tagline" v-html="tagLine"></h3>
+      <h2 class="hero-image__tagline" v-html="tagLine"></h2>
     </div>
   </section>
 </template>
