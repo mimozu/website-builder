@@ -67,4 +67,9 @@ collections:
                   - { label: 'YouTube', value: 'youtube' }
                   - { label: 'Linkedin', value: 'linkedin' }
                   - { label: 'Pinterest', value: 'pinterest' }
-              - { name: url, label: URL, widget: string }
+              - {
+                  name: username,
+                  label: Username,
+                  widget: string,
+                  hint: 'If your url is e.g. https://instagram.com/sitebuilder, than your username is sitebuilder.',
+                }
