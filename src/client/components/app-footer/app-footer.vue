@@ -70,10 +70,6 @@ export default {
 </script>
 
 <style>
-.app-footer {
-  padding-bottom: 72px;
-}
-
 .app-footer__list {
   display: flex;
   flex-wrap: wrap;

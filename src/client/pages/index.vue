@@ -10,7 +10,7 @@
     />
 
     <div class="page-introduction">
-      <div class="footer-home__introduction">
+      <div class="page-introduction__content">
         <!-- eslint-disable-next-line -->
         <div v-html="page.intro" class="page-introduction__intro"></div>
         <a
@@ -20,7 +20,10 @@
         >
       </div>
 
-      <app-footer :socialmedia="page.socialmedia"></app-footer>
+      <app-footer
+        class="page-introduction__footer"
+        :socialmedia="page.socialmedia"
+      ></app-footer>
     </div>
   </div>
 </template>
@@ -94,7 +97,11 @@ export default {
   margin-bottom: 60px;
 }
 
-.footer-home__introduction {
+.page-introduction__footer {
+  padding-bottom: 72px;
+}
+
+.page-introduction__content {
   margin-bottom: 120px;
 }
 </style>
