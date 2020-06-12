@@ -3,7 +3,14 @@ const jimp = require('jimp')
 
 module.exports = {
   onPreBuild: async ({ utils }) => {
-    const directoryPath = path.join(__dirname)
+    // /opt/build/repo/src/server/plugins/netlify-plugin-hello-world
+    const directoryPath = path.join(
+      __dirname,
+      '..',
+      '..',
+      '..',
+      'client/static/images/uploads'
+    )
     console.log('Hello world from onPreBuild event!. Path is ', directoryPath)
 
     try {
