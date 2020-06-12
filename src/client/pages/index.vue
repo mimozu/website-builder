@@ -79,22 +79,20 @@ export default {
   margin-left: auto;
   margin-right: auto;
   max-width: 500px;
-  margin-bottom: 48px;
 }
 
 .page-introduction {
-  max-width: 870px;
   margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
-  padding: 84px 60px;
+  padding: 60px 20px;
   text-align: center;
-  font-size: 1.5rem;
   line-height: 1.5;
 }
 
 .page-introduction__intro {
   margin-bottom: 60px;
+  font-size: 1.1rem;
 }
 
 .page-introduction__footer {
@@ -102,6 +100,30 @@ export default {
 }
 
 .page-introduction__content {
-  margin-bottom: 120px;
+  margin-bottom: 72px;
+}
+
+@media (min-width: 580px) {
+  .page-introduction {
+    max-width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    padding: 84px 60px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .page-introduction__button {
+    font-size: 1.4rem;
+  }
+
+  .page-introduction__intro {
+    font-size: 1.5rem;
+  }
+
+  .page-introduction__content {
+    margin-bottom: 120px;
+  }
 }
 </style>
