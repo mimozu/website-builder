@@ -1,9 +1,9 @@
 const path = require('path')
+const fs = require('fs')
 const jimp = require('jimp')
 
 module.exports = {
   onPreBuild: async ({ utils }) => {
-    // /opt/build/repo/src/server/plugins/netlify-plugin-hello-world
     const directoryPath = path.join(
       __dirname,
       '..',
@@ -12,6 +12,12 @@ module.exports = {
       'client/static/images/uploads'
     )
     console.log('Hello world from onPreBuild event!. Path is ', directoryPath)
+    fs.readdir(directoryPath, function (err, files) {
+      if (err) {
+        return console.log('Unable to check folder', err)
+      }
+      console.log(files)
+    })
 
     try {
       const image = await jimp.read('src/client/static/images/uploads/jump.jpg')
