@@ -12,12 +12,10 @@ module.exports = {
       'client/static/images/uploads'
     )
     console.log('Hello world from onPreBuild event!. Path is ', directoryPath)
-    fs.readdir(directoryPath, function (err, files) {
-      if (err) {
-        return console.log('Unable to check folder', err)
-      }
-      console.log(files)
-    })
+    const files = await fs.promises.readdir(directoryPath)
+    for (const file of files) {
+      console.log(file)
+    }
 
     try {
       const image = await jimp.read('src/client/static/images/uploads/jump.jpg')
