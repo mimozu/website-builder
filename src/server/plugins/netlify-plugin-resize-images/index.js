@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const jimp = require('jimp')
-const directoryPath = path.join(__dirname, '../../../.../dist/images/uploads')
+const directoryPath = path.join(__dirname, '../../../../dist/images/uploads')
 
 async function getFilesFromDir(folderPath) {
   try {
