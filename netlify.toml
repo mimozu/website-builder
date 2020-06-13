@@ -3,4 +3,4 @@
   publish = "dist"
 
 [[plugins]]
-  package = "/src/server/plugins/netlify-plugin-hello-world"
+  package = "/src/server/plugins/netlify-plugin-resize-images"
