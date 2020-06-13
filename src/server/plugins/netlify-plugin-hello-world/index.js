@@ -34,8 +34,10 @@ module.exports = {
       sizes.forEach((size) => {
         files.forEach(async (file) => {
           try {
-            console.log('resized image path', `${directoryPath}/${stripExtension(file)}-${size}w.jpg`
-            ))
+            console.log(
+              'resized image path',
+              `${directoryPath}/${stripExtension(file)}-${size}w.jpg`
+            )
             const image = await jimp.read(`${directoryPath}/${file}`)
             await image.resize(size, jimp.AUTO)
             await image.writeAsync(
