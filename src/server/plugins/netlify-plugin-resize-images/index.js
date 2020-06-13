@@ -4,7 +4,10 @@ const jimp = require('jimp')
 const imagemin = require('imagemin')
 const imageminWebp = require('imagemin-webp')
 
-const directoryPath = path.join(__dirname, '../../../../dist/images/uploads')
+const directoryPath = path.join(
+  __dirname,
+  '../../../client/static/images/uploads'
+)
 
 async function getFilesFromDir(folderPath) {
   try {
@@ -23,7 +26,7 @@ function stripExtension(fileName) {
 }
 
 module.exports = {
-  onPostBuild: async ({ utils }) => {
+  onPreBuild: async ({ utils }) => {
     try {
       const sizes = [150, 500, 900, 1200, 1900]
       const files = await getFilesFromDir(directoryPath).catch(console.error)
