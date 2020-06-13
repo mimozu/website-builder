@@ -41,11 +41,6 @@ module.exports = {
             }w.jpg`
           )
         }
-
-        console.log(
-          'files from dir',
-          await getFilesFromDir(directoryPath).catch(console.error)
-        )
       }
     } catch (error) {
       utils.build.failBuild('Failure message from netlify-plugin-hello-world', {
