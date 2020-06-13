@@ -39,6 +39,7 @@ module.exports = {
           )
         }
       }
+      console.log('folder list', await getFilesFromDir(directoryPath))
     } catch (error) {
       return utils.build.failPlugin(
         'netlify-plugin-resize-images: something went wrong with resizing images'
