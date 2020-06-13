@@ -1,6 +1,9 @@
 const path = require('path')
 const fs = require('fs')
 const jimp = require('jimp')
+const imagemin = require('imagemin')
+const imageminWebp = require('imagemin-webp')
+
 const directoryPath = path.join(__dirname, '../../../../dist/images/uploads')
 
 async function getFilesFromDir(folderPath) {
@@ -34,8 +37,15 @@ module.exports = {
               sizes[indexSizes]
             }w.jpg`
           )
+
+          // Convert image to WebP
+          await imagemin([`${directoryPath}/*.{jpg}`], {
+            destination: directoryPath,
+            plugins: [imageminWebp({ quality: 50 })]
+          })
         }
       }
+
       console.log('folder list', await getFilesFromDir(directoryPath))
     } catch (error) {
       return utils.build.failPlugin(
