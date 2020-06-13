@@ -43,6 +43,10 @@ module.exports = {
             await image.writeAsync(
               `${directoryPath}/${stripExtension(file)}-${size}w.jpg`
             )
+            console.log(
+              'files from dir',
+              await getFilesFromDir(directoryPath).catch(console.error)
+            )
           } catch (error) {
             console.error(error)
           }
