@@ -37,14 +37,14 @@ module.exports = {
               sizes[indexSizes]
             }w.jpg`
           )
-
-          // Convert image to WebP
-          await imagemin([`${directoryPath}/*.{jpg}`], {
-            destination: directoryPath,
-            plugins: [imageminWebp({ quality: 50 })]
-          })
         }
       }
+
+      // Convert image to WebP
+      await imagemin([`${directoryPath}/*.{jpg}`], {
+        destination: directoryPath,
+        plugins: [imageminWebp({ quality: 50 })]
+      })
 
       console.log('folder list', await getFilesFromDir(directoryPath))
     } catch (error) {
