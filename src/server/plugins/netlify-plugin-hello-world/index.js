@@ -31,25 +31,21 @@ module.exports = {
       const sizes = [150, 500, 900, 1200, 1900]
       const files = await getFilesFromDir(directoryPath).catch(console.error)
 
-      files.forEach(async (file) => {
-        try {
-          console.log(
-            'resized image path',
-            `${directoryPath}/${stripExtension(file)}-${sizes[1]}w.jpg`
-          )
-          const image = await jimp.read(`${directoryPath}/${file}`)
-          await image.resize(sizes[1], jimp.AUTO)
-          await image.writeAsync(
-            `${directoryPath}/${stripExtension(file)}-${sizes[1]}w.jpg`
-          )
-          console.log(
-            'files from dir',
-            await getFilesFromDir(directoryPath).catch(console.error)
-          )
-        } catch (error) {
-          console.error(error)
-        }
-      })
+      for (let index = 0; index < files.length; index++) {
+        console.log(
+          'resized image path',
+          `${directoryPath}/${stripExtension(files[index])}-${sizes[1]}w.jpg`
+        )
+        const image = await jimp.read(`${directoryPath}/${files[index]}`)
+        await image.resize(sizes[1], jimp.AUTO)
+        await image.writeAsync(
+          `${directoryPath}/${stripExtension(files[index])}-${sizes[1]}w.jpg`
+        )
+        console.log(
+          'files from dir',
+          await getFilesFromDir(directoryPath).catch(console.error)
+        )
+      }
     } catch (error) {
       utils.build.failBuild('Failure message from netlify-plugin-hello-world', {
         error
