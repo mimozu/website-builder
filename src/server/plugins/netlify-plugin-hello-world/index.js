@@ -20,7 +20,7 @@ async function getFilesFromDir(folderPath) {
 module.exports = {
   onPreBuild: async ({ utils }) => {
     try {
-      const files = getFilesFromDir(directoryPath).catch(console.error)
+      const files = await getFilesFromDir(directoryPath).catch(console.error)
       files.forEach(async (file) => {
         console.log(file)
         const image = await jimp.read(`${directoryPath}/${file}`)
@@ -28,10 +28,9 @@ module.exports = {
         await image.writeAsync(`${directoryPath}/${file}-150w.jpg`)
       })
     } catch (error) {
-      utils.build.failBuild(
-        'Failure message from netlify-plugin-hello-worldddd',
-        { error }
-      )
+      utils.build.failBuild('Failure message from netlify-plugin-hello-world', {
+        error
+      })
     }
   }
 }
