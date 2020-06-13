@@ -17,6 +17,14 @@ async function getFilesFromDir(folderPath) {
   }
 }
 
+function stripExtension(fileName) {
+  const file = fileName.split('.')
+  if (file.length === 2) {
+    return file[0]
+  }
+  console.error('stripExtension(): Error splitting extension from file name.')
+}
+
 module.exports = {
   onPreBuild: async ({ utils }) => {
     try {
@@ -25,7 +33,9 @@ module.exports = {
         console.log(file)
         const image = await jimp.read(`${directoryPath}/${file}`)
         await image.resize(150, jimp.AUTO)
-        await image.writeAsync(`${directoryPath}/${file}-150w.jpg`)
+        await image.writeAsync(
+          `${directoryPath}/${stripExtension(file)}-150w.jpg`
+        )
       })
     } catch (error) {
       utils.build.failBuild('Failure message from netlify-plugin-hello-world', {
