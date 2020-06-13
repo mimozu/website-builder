@@ -31,16 +31,17 @@ module.exports = {
       const sizes = [150, 500, 900, 1200, 1900]
       const files = await getFilesFromDir(directoryPath).catch(console.error)
 
-      for (let index = 0; index < files.length; index++) {
-        console.log(
-          'resized image path',
-          `${directoryPath}/${stripExtension(files[index])}-${sizes[1]}w.jpg`
-        )
-        const image = await jimp.read(`${directoryPath}/${files[index]}`)
-        await image.resize(sizes[1], jimp.AUTO)
-        await image.writeAsync(
-          `${directoryPath}/${stripExtension(files[index])}-${sizes[1]}w.jpg`
-        )
+      for (let indexFiles = 0; indexFiles < files.length; indexFiles++) {
+        for (let indexSizes = 0; indexSizes < sizes.length; indexSizes++) {
+          const image = await jimp.read(`${directoryPath}/${files[indexFiles]}`)
+          await image.resize(sizes[indexSizes], jimp.AUTO)
+          await image.writeAsync(
+            `${directoryPath}/${stripExtension(files[indexFiles])}-${
+              sizes[indexSizes]
+            }w.jpg`
+          )
+        }
+
         console.log(
           'files from dir',
           await getFilesFromDir(directoryPath).catch(console.error)
