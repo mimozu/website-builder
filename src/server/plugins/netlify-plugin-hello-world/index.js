@@ -13,7 +13,7 @@ async function getFilesFromDir(folderPath) {
   try {
     return await fs.promises.readdir(folderPath)
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 
@@ -28,14 +28,16 @@ function stripExtension(fileName) {
 module.exports = {
   onPreBuild: async ({ utils }) => {
     try {
+      const sizes = [150, 500, 900, 1200, 1900]
       const files = await getFilesFromDir(directoryPath).catch(console.error)
-      files.forEach(async (file) => {
-        console.log(file)
-        const image = await jimp.read(`${directoryPath}/${file}`)
-        await image.resize(150, jimp.AUTO)
-        await image.writeAsync(
-          `${directoryPath}/${stripExtension(file)}-150w.jpg`
-        )
+      sizes.forEach(async (size) => {
+        await files.forEach(async (file) => {
+          const image = await jimp.read(`${directoryPath}/${file}`)
+          await image.resize(size, jimp.AUTO)
+          await image.writeAsync(
+            `${directoryPath}/${stripExtension(file)}-${size}w.jpg`
+          )
+        })
       })
     } catch (error) {
       utils.build.failBuild('Failure message from netlify-plugin-hello-world', {
