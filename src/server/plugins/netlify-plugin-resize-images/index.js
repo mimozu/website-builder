@@ -26,7 +26,7 @@ function stripExtension(fileName) {
 }
 
 module.exports = {
-  onPreBuild: async ({ utils }) => {
+  onPostBuild: async ({ utils }) => {
     try {
       const sizes = [150, 500, 900, 1200, 1900]
       const files = await getFilesFromDir(directoryPath).catch(console.error)
