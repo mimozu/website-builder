@@ -29,7 +29,7 @@ module.exports = {
   onPreBuild: async ({ utils }) => {
     try {
       const sizes = [150, 500, 900, 1200, 1900]
-      const files = await getFilesFromDir(directoryPath).catch(console.error)
+      const files = await getFilesFromDir(directoryPath)
 
       for (let indexFiles = 0; indexFiles < files.length; indexFiles++) {
         for (let indexSizes = 0; indexSizes < sizes.length; indexSizes++) {
@@ -52,7 +52,7 @@ module.exports = {
       console.log('files converted to webp', filesConvertedToWebP)
     } catch (error) {
       return utils.build.failPlugin(
-        `(netlify-plugin-resize-images) something went wrong with resizing images: ${error} `
+        `(netlify-plugin-resize-images) something went wrong: ${error} `
       )
     }
   }
