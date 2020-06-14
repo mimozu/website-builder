@@ -44,15 +44,12 @@ module.exports = {
       }
 
       // Convert images in directory to WebP
-      const filesConvertedToWebP = await imagemin(
-        [directoryPath + '/*.{jpg}'],
-        {
-          destination: directoryPath,
-          plugins: [imageminWebp({ quality: 50 })]
-        }
-      )
-      console.log('files converted to webp', filesConvertedToWebP)
+      const filesConvertedToWebP = await imagemin([directoryPath], {
+        destination: directoryPath,
+        plugins: [imageminWebp({ quality: 50 })]
+      })
       console.log('folder list', await getFilesFromDir(directoryPath))
+      console.log('files converted to webp', filesConvertedToWebP)
     } catch (error) {
       return utils.build.failPlugin(
         'netlify-plugin-resize-images: something went wrong with resizing images'
