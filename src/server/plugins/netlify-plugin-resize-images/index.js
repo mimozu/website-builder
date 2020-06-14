@@ -45,7 +45,7 @@ module.exports = {
 
       // Convert images in directory to WebP
       const filesConvertedToWebP = await imagemin(
-        [`${directoryPath}/*.{jpg}`],
+        [directoryPath + '/*.{jpg}'],
         {
           destination: directoryPath,
           plugins: [imageminWebp({ quality: 50 })]
