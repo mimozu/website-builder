@@ -35,10 +35,10 @@ export default {
   data() {
     return {
       srcSetSizes: {
-        500: '(max-width: 400px): 500px 100vw',
-        900: '(min-width: 500px) 900px',
+        1900: '(min-width: 1200px) 1900px',
         1200: '(min-width: 900px) 1200px',
-        1900: '(min-width: 1200px) 1900px'
+        900: '(min-width: 500px) 900px',
+        500: '(max-width: 400px): 500px 100vw'
       }
     }
   },
