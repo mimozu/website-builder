@@ -1,14 +1,14 @@
 <template>
   <section class="hero-image">
     <picture>
-      <template v-for="size in imageSizes">
-        <source
-          :key="size"
-          :srcset="srcSet(size)"
-          :sizes="sizes"
-          type="image/jpeg"
-        />
-      </template>
+      <source
+        v-for="(size, width) in srcSetSizes"
+        :key="size"
+        :srcset="srcSet(width)"
+        :sizes="size"
+        type="image/jpeg"
+        :data-index="index"
+      />
       <img class="hero-image__img" :src="image.src" :alt="image.alt" />
     </picture>
     <div class="hero-image__readable"></div>
@@ -34,13 +34,17 @@ export default {
   },
   data() {
     return {
-      imageSizes: [500, 900, 1200, 1900],
-      sizes:
-        '(max-width: 400px): 500px 100vw, (min-width: 500px) 900px, (min-width: 900px) 1200px, (min-width: 1200px) 1900px'
+      srcSetSizes: {
+        500: '(max-width: 400px): 500px 100vw',
+        900: '(min-width: 500px) 900px',
+        1200: '(min-width: 900px) 1200px',
+        1900: '(min-width: 1200px) 1900px'
+      }
     }
   },
   methods: {
     srcSet(size) {
+      console.log('size', size)
       return `${this.image.path}/${this.image.fileNameWithoutExtension}-${size}w.jpg ${size}w`
     }
   }
