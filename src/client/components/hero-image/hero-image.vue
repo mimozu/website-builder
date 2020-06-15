@@ -1,6 +1,11 @@
 <template>
   <section class="hero-image">
-    <img class="hero-image__img" :src="imageSrc" :alt="imageAlt" />
+    <picture>
+      <template v-for="size in imageSizes">
+        <source :key="size" :srcset="test(size)" type="image/jpeg" />
+      </template>
+      <img class="hero-image__img" :src="image.src" :alt="image.alt" />
+    </picture>
     <div class="hero-image__readable"></div>
 
     <div class="hero-image__content">
@@ -13,17 +18,23 @@
 <script>
 export default {
   props: {
-    imageSrc: {
-      type: String,
-      required: true
-    },
-    imageAlt: {
-      type: String,
+    image: {
+      type: Object,
       required: true
     },
     tagLine: {
       type: String,
       required: true
+    }
+  },
+  data() {
+    return {
+      imageSizes: [150, 500, 900, 1200, 1900]
+    }
+  },
+  methods: {
+    test(size) {
+      return `${this.image.path}/${this.image.fileNameWithoutExtension}-${size}w.jpg ${size}w`
     }
   }
 }
