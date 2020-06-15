@@ -37,13 +37,12 @@ export default {
         { width: 1900, sizes: '(min-width: 1200px) 1900px' },
         { width: 1200, sizes: '(min-width: 900px) 1200px' },
         { width: 900, sizes: '(min-width: 500px) 900px' },
-        { width: 500, sizes: '(max-width: 499px) 500px 100vw' }
+        { width: 500, sizes: '(max-width: 499px) 100vw' }
       ]
     }
   },
   methods: {
     srcSet(size) {
-      console.log('size', size)
       return `${this.image.path}/${this.image.fileNameWithoutExtension}-${size}w.jpg ${size}w`
     }
   }
