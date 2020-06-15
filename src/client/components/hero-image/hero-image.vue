@@ -2,7 +2,12 @@
   <section class="hero-image">
     <picture>
       <template v-for="size in imageSizes">
-        <source :key="size" :srcset="test(size)" type="image/jpeg" />
+        <source
+          :key="size"
+          :srcset="srcSet(size)"
+          :sizes="sizes"
+          type="image/jpeg"
+        />
       </template>
       <img class="hero-image__img" :src="image.src" :alt="image.alt" />
     </picture>
@@ -29,11 +34,13 @@ export default {
   },
   data() {
     return {
-      imageSizes: [1900, 1200, 900, 500, 150]
+      imageSizes: [500, 900, 1200, 1900],
+      sizes:
+        '(max-width: 400px): 500px 100vw, (min-width: 500px) 900px, (min-width: 900px) 1200px, (min-width: 1200px) 1900px'
     }
   },
   methods: {
-    test(size) {
+    srcSet(size) {
       return `${this.image.path}/${this.image.fileNameWithoutExtension}-${size}w.jpg ${size}w`
     }
   }
