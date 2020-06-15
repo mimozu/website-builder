@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      imageSizes: [150, 500, 900, 1200, 1900]
+      imageSizes: [1900, 1200, 900, 500, 150]
     }
   },
   methods: {
