@@ -2,12 +2,11 @@
   <section class="hero-image">
     <picture>
       <source
-        v-for="(size, width) in srcSetSizes"
-        :key="size"
-        :srcset="srcSet(width)"
-        :sizes="size"
+        v-for="item in srcSetSizes"
+        :key="item.size"
+        :srcset="srcSet(item.width)"
+        :sizes="item.sizes"
         type="image/jpeg"
-        :data-index="index"
       />
       <img class="hero-image__img" :src="image.src" :alt="image.alt" />
     </picture>
@@ -34,12 +33,12 @@ export default {
   },
   data() {
     return {
-      srcSetSizes: {
-        1900: '(min-width: 1200px) 1900px',
-        1200: '(min-width: 900px) 1200px',
-        900: '(min-width: 500px) 900px',
-        500: '(max-width: 400px): 500px 100vw'
-      }
+      srcSetSizes: [
+        { width: 1900, sizes: '(min-width: 1200px) 1900px' },
+        { width: 1200, sizes: '(min-width: 900px) 1200px' },
+        { width: 900, sizes: '(min-width: 500px) 900px' },
+        { width: 500, sizes: '(max-width: 499px) 500px 100vw' }
+      ]
     }
   },
   methods: {
