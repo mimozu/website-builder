@@ -39,7 +39,7 @@ module.exports = {
               sizes[indexSizes]
             }w.jpg`
           )
-          await sharp(image)
+          await sharp(`${directoryPath}/${files[indexFiles]}`)
             .webp({
               lossless: true
             })
