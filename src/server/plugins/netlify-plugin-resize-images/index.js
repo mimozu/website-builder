@@ -1,8 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const jimp = require('jimp')
-const imagemin = require('imagemin')
-const imageminWebp = require('imagemin-webp')
+const sharp = require('sharp')
 
 const directoryPath = path.join(
   __dirname,
@@ -40,16 +39,14 @@ module.exports = {
               sizes[indexSizes]
             }w.jpg`
           )
+          await sharp(image)
+            .webp({
+              lossless: true
+            })
+            .toFile('output.webp')
         }
       }
-
-      // Convert images in directory to WebP
-      const filesConvertedToWebP = await imagemin(['/bla'], {
-        destination: '/bladibla',
-        plugins: [imageminWebp({ quality: 50 })]
-      })
-      console.log('folder list', await getFilesFromDir(directoryPath))
-      console.log('files converted to webp', filesConvertedToWebP)
+      console.log(files)
     } catch (error) {
       return utils.build.failPlugin(
         `(netlify-plugin-resize-images) something went wrong: ${error} `
