@@ -2,10 +2,8 @@
   <section class="hero-image">
     <picture>
       <source
-        v-for="item in srcSetSizes"
-        :key="item.size"
-        :srcset="srcSet(item.width)"
-        :sizes="item.sizes"
+        sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width: 768px) 800px, 600px"
+        :srcset="srcSet('jpg')"
         type="image/jpeg"
       />
       <img class="hero-image__img" :src="image.src" :alt="image.alt" />
@@ -31,19 +29,14 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      srcSetSizes: [
-        { width: 1900, sizes: '(min-width: 1200px) 1900px' },
-        { width: 1200, sizes: '(min-width: 900px) 1200px' },
-        { width: 900, sizes: '(min-width: 500px) 900px' },
-        { width: 500, sizes: '(max-width: 499px) 100vw' }
-      ]
-    }
-  },
   methods: {
-    srcSet(size) {
-      return `${this.image.path}/${this.image.fileNameWithoutExtension}-${size}w.jpg ${size}w`
+    srcSet(type) {
+      return `
+        /images/uploads/${this.image.fileNameWithoutExtension}-600w.${type} 600w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-960w.${type} 960w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-1280w.${type} 1280w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-1920w.${type} 1920w
+      `
     }
   }
 }
