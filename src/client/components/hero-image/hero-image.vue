@@ -1,6 +1,13 @@
 <template>
   <section class="hero-image">
-    <img class="hero-image__img" :src="imageSrc" :alt="imageAlt" />
+    <picture>
+      <source
+        sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width: 768px) 800px, 600px"
+        :srcset="srcSet('jpg')"
+        type="image/jpeg"
+      />
+      <img class="hero-image__img" :src="image.src" :alt="image.alt" />
+    </picture>
     <div class="hero-image__readable"></div>
 
     <div class="hero-image__content">
@@ -13,17 +20,23 @@
 <script>
 export default {
   props: {
-    imageSrc: {
-      type: String,
-      required: true
-    },
-    imageAlt: {
-      type: String,
+    image: {
+      type: Object,
       required: true
     },
     tagLine: {
       type: String,
       required: true
+    }
+  },
+  methods: {
+    srcSet(type) {
+      return `
+        /images/uploads/${this.image.fileNameWithoutExtension}-600w.${type} 600w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-960w.${type} 960w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-1280w.${type} 1280w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-1920w.${type} 1920w
+      `
     }
   }
 }

@@ -1,7 +1,13 @@
 const path = require('path')
 const fs = require('fs')
 const jimp = require('jimp')
-const directoryPath = path.join(__dirname, '../../../../dist/images/uploads')
+const imagemin = require('imagemin')
+const imageminWebp = require('imagemin-webp')
+
+const directoryPath = path.join(
+  __dirname,
+  '../../../client/static/images/uploads'
+)
 
 async function getFilesFromDir(folderPath) {
   try {
@@ -20,10 +26,10 @@ function stripExtension(fileName) {
 }
 
 module.exports = {
-  onPostBuild: async ({ utils }) => {
+  onPreBuild: async ({ utils }) => {
     try {
-      const sizes = [150, 500, 900, 1200, 1900]
-      const files = await getFilesFromDir(directoryPath).catch(console.error)
+      const sizes = [600, 960, 1280, 1920]
+      const files = await getFilesFromDir(directoryPath)
 
       for (let indexFiles = 0; indexFiles < files.length; indexFiles++) {
         for (let indexSizes = 0; indexSizes < sizes.length; indexSizes++) {
@@ -36,10 +42,17 @@ module.exports = {
           )
         }
       }
+
+      // Convert images in directory to WebP
+      const filesConvertedToWebP = await imagemin(['/bla'], {
+        destination: '/bladibla',
+        plugins: [imageminWebp({ quality: 50 })]
+      })
       console.log('folder list', await getFilesFromDir(directoryPath))
+      console.log('files converted to webp', filesConvertedToWebP)
     } catch (error) {
       return utils.build.failPlugin(
-        'netlify-plugin-resize-images: something went wrong with resizing images'
+        `(netlify-plugin-resize-images) something went wrong: ${error} `
       )
     }
   }

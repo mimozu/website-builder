@@ -3,11 +3,7 @@
     <nuxt-content :document="page" />
     <app-header :title="page.sitetitle" />
 
-    <hero-image
-      :image-src="page.file"
-      :image-alt="page.filedescription"
-      :tag-line="page.tagline"
-    />
+    <hero-image :image="page.image" :tag-line="page.tagline" />
 
     <div class="page-introduction">
       <div class="page-introduction__content">
@@ -30,6 +26,7 @@
 
 <script>
 import marked from 'marked'
+import { stripFileExtension } from '../lib/strip-file-extension.js'
 import appHeader from '../components/app-header/app-header.vue'
 import appFooter from '../components/app-footer/app-footer.vue'
 import heroImage from '../components/hero-image/hero-image.vue'
@@ -37,10 +34,25 @@ import heroImage from '../components/hero-image/hero-image.vue'
 export default {
   components: { appFooter, appHeader, heroImage },
   async asyncData({ $content, params }) {
+    const getFileName = (path) => {
+      return path.split('/').pop()
+    }
+
+    const getPath = (path) => {
+      return path.split('/').slice(0, -1).join('/')
+    }
+
     try {
       const page = await $content('homepage').fetch()
       page.intro = marked(page.intro)
       page.tagline = marked(page.tagline)
+      page.image = {
+        src: page.file,
+        path: getPath(page.file),
+        fileName: getFileName(page.file),
+        fileNameWithoutExtension: stripFileExtension(getFileName(page.file)),
+        alt: page.filedescription
+      }
 
       return {
         page
