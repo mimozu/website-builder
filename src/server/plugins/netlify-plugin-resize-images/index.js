@@ -30,6 +30,12 @@ module.exports = {
       const sizes = [600, 960, 1280, 1920]
       const files = await getFilesFromDir(directoryPath)
 
+      if (files.length === 0) {
+        return utils.build.failPlugin(
+          '(netlify-plugin-resize-images) no files in directory'
+        )
+      }
+
       for (let indexFiles = 0; indexFiles < files.length; indexFiles++) {
         for (let indexSizes = 0; indexSizes < sizes.length; indexSizes++) {
           const image = await jimp.read(`${directoryPath}/${files[indexFiles]}`)
@@ -43,10 +49,14 @@ module.exports = {
             .webp({
               lossless: true
             })
-            .toFile(`${directoryPath}/output.webp`)
+            .toFile(
+              `${directoryPath}/${stripExtension(files[indexFiles])}-${
+                sizes[indexSizes]
+              }w.webp`
+            )
         }
       }
-      console.log(files)
+      console.log(await getFilesFromDir(directoryPath))
     } catch (error) {
       return utils.build.failPlugin(
         `(netlify-plugin-resize-images) something went wrong: ${error} `
