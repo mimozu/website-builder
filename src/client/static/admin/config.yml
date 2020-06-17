@@ -28,6 +28,7 @@ collections:
               name: file,
               widget: file,
               default: '/images/uploads/jump.jpg',
+              allow_multiple: false,
               hint: 'Select a photo that will be displayed to fill your screen.',
             }
           - label: Photo Description
