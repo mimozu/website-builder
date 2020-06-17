@@ -12,7 +12,7 @@ intro: >-
 
 
   Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. **Hoc non est positum in nostra actione.** Item de contrariis, a quibus ad genera formasque generum venerunt.
-buttontext: Let's conquer your challenge!
+buttontext: Let's take up your challenge!
 buttonemailaddress: hello@bladibla.com
 socialmedia:
   - platform: instagram
