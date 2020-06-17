@@ -39,6 +39,7 @@ module.exports = {
       for (let indexFiles = 0; indexFiles < files.length; indexFiles++) {
         for (let indexSizes = 0; indexSizes < sizes.length; indexSizes++) {
           const image = await jimp.read(`${directoryPath}/${files[indexFiles]}`)
+          image.quality(75)
           await image.resize(sizes[indexSizes], jimp.AUTO)
           await image.writeAsync(
             `${directoryPath}/${stripExtension(files[indexFiles])}-${
