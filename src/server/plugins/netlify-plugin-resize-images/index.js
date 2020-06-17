@@ -47,7 +47,7 @@ module.exports = {
             }w.jpg`
           )
           await sharp(`${directoryPath}/${files[indexFiles]}`)
-            .webp({ quality: 55 })
+            .webp({ quality: 50 })
             .toFile(
               `${directoryPath}/${stripExtension(files[indexFiles])}-${
                 sizes[indexSizes]
