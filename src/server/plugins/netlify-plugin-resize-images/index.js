@@ -43,7 +43,7 @@ module.exports = {
             .webp({
               lossless: true
             })
-            .toFile('output.webp')
+            .toFile(`${directoryPath}/output.webp`)
         }
       }
       console.log(files)
