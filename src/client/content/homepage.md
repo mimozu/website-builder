@@ -10,7 +10,10 @@ intro: >-
   will benefit from for a lifetime.
 
 
-  Are you ready for your new life, where you have optimal **confidence** and **control** over any situation?
+  Are you ready for your new life, where you **trust your own judgement** and have **control** over any situation?
+
+
+  The end result is a **new identity**.
 buttontext: Let's take up your challenge!
 buttonemailaddress: hello@bladibla.com
 socialmedia:
