@@ -5,12 +5,12 @@ filedescription: Photo by Remi Jacquaint
 tagline: Can you **handle** your next big **challenge**?
 intro: >-
   I will help you get out of your **comfort zone** and take on new unimaginable
-  challenges. We will work on getting a **new perspective**, how to handle your
-  **negative thoughts** and building **new habits** that you will benefit from
-  for a lifetime.
+  challenges. We will work on getting a **new perspective**, getting **fit**,
+  how to handle your **negative thoughts** and building **new habits** that you
+  will benefit from for a lifetime.
 
 
-  Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. **Hoc non est positum in nostra actione.** Item de contrariis, a quibus ad genera formasque generum venerunt.
+  Are you ready for your new life, where you have optimal **confidence** and **control** over any situation?
 buttontext: Let's take up your challenge!
 buttonemailaddress: hello@bladibla.com
 socialmedia:
