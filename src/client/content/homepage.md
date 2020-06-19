@@ -4,14 +4,16 @@ file: /images/uploads/jump.jpg
 filedescription: Photo by Remi Jacquaint
 tagline: Can you **handle** your next big **challenge**?
 intro: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Laboro autem non
-  sine causa;](http://loripsum.net/) Quid enim ab antiquis ex eo genere, quod ad
-  disserendum valet, praetermissum est? [At eum nihili
-  facit;](http://loripsum.net/) Non autem hoc: igitur ne illud quidem. Duo
-  Reges: constructio interrete. 
+  I will help you get out of your **comfort zone** and take on new unimaginable
+  challenges. We will work on getting a **new perspective**, getting **fit**,
+  how to handle your **negative thoughts** and building **new habits** that you
+  will benefit from for a lifetime.
 
 
-  Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. **Hoc non est positum in nostra actione.** Item de contrariis, a quibus ad genera formasque generum venerunt.
+  Are you ready for your new life, where you **trust your own judgement** and have **control** over any situation?
+
+
+  The end result is a **new identity**.
 buttontext: Let's take up your challenge!
 buttonemailaddress: hello@bladibla.com
 socialmedia:
