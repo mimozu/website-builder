@@ -1,8 +1,15 @@
 export default {
   mode: 'universal',
-  server: {
-    port: '8000',
-    host: '0.0.0.0'
+  /*
+   ** https://github.com/nuxt/components
+   */
+  components: true,
+  // server: {
+  //   port: '8000',
+  //   host: '0.0.0.0'
+  // },
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL
   },
   srcDir: 'src/client',
   generate: {},
@@ -49,8 +56,6 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
     // Doc: https://content.nuxtjs.org/installation
     '@nuxt/content'
   ],

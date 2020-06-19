@@ -27,12 +27,8 @@
 <script>
 import marked from 'marked'
 import { stripFileExtension } from '../lib/strip-file-extension.js'
-import appHeader from '../components/app-header/app-header.vue'
-import appFooter from '../components/app-footer/app-footer.vue'
-import heroImage from '../components/hero-image/hero-image.vue'
 
 export default {
-  components: { appFooter, appHeader, heroImage },
   async asyncData({ $content, params }) {
     const getFileName = (path) => {
       return path.split('/').pop()
