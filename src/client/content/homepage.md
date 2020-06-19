@@ -13,10 +13,7 @@ intro: >-
   We will work on getting a **new perspective**, getting **fit**, how to handle your **negative thoughts** and building **new habits** that you will benefit from for a lifetime.
 
 
-  Are you ready for your new life, where you **trust your own judgement** and have **control** over any situation?
-
-
-  The end result is a **new identity**.
+  Are you ready for your new life, where you **trust your own judgement,** have **control** over any situation and you'll end up with a **new identity**?
 buttontext: Let's take up your challenge!
 buttonemailaddress: hello@bladibla.com
 socialmedia:
