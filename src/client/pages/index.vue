@@ -16,10 +16,7 @@
         >
       </div>
 
-      <app-footer
-        class="page-introduction__footer"
-        :socialmedia="page.socialmedia"
-      ></app-footer>
+      <app-footer :socialmedia="page.socialmedia"></app-footer>
     </div>
   </div>
 </template>
@@ -98,10 +95,6 @@ export default {
 .page-introduction__intro {
   margin-bottom: 60px;
   font-size: 1.1rem;
-}
-
-.page-introduction__footer {
-  padding-bottom: 72px;
 }
 
 .page-introduction__content {
