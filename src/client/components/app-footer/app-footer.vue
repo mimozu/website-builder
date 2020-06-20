@@ -73,7 +73,6 @@ export default {
 .app-footer__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   list-style: none;
 }
 

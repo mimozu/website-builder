@@ -84,8 +84,6 @@ export default {
 
 .page-introduction__button {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 500px;
 }
 
@@ -94,7 +92,6 @@ export default {
   margin-right: auto;
   min-height: 100vh;
   padding: 60px 20px;
-  text-align: center;
   line-height: 1.5;
 }
 
@@ -113,12 +110,12 @@ export default {
 
 @media (min-width: 580px) {
   .page-introduction {
-    max-width: 870px;
+    max-width: 730px;
     margin-left: auto;
     margin-right: auto;
     min-height: 100vh;
-    padding: 84px 60px;
-    text-align: center;
+    padding-top: 84px;
+    padding-bottom: 84px;
     line-height: 1.5;
   }
 
