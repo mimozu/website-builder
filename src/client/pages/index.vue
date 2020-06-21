@@ -21,7 +21,7 @@
       <div>
         <h3>Testing Netlify Large Media</h3>
         <img
-          src="/images/uploads/balance.jpg?nf_resize=fit&w=150"
+          src="/images/uploads/jump.jpg?nf_resize=fit&w=150"
           alt="Balancing"
         />
       </div>
