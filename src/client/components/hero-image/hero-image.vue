@@ -91,6 +91,14 @@ export default {
   color: #fff;
 }
 
+@media (max-height: 400px) {
+  .hero-image__readable,
+  .hero-image__img,
+  .hero-image__content {
+    height: 700px;
+  }
+}
+
 @media (min-width: 450px) {
   .hero-image__tagline {
     max-width: 400px;
