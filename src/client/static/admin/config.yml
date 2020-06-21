@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
   branch: master
-site_url: https://fervent-bardeen-0b318e.netlify.app
-display_url: https://fervent-bardeen-0b318e.netlify.app
-logo_url: https://fervent-bardeen-0b318e.netlify.app/images/logo.svg
+site_url: https://uphill-5e1750c4.netlify.app
+display_url: https://uphill-5e1750c4.netlify.app
+logo_url: https://uphill-5e1750c4.netlify.app/images/logo.svg
 media_folder: 'src/client/static/images/uploads'
 public_folder: '/images/uploads'
 collections:
