@@ -1,7 +1,6 @@
 const path = require('path')
 const fs = require('fs')
 const jimp = require('jimp')
-const sharp = require('sharp')
 
 const directoryPath = path.join(
   __dirname,
@@ -46,13 +45,6 @@ module.exports = {
               sizes[indexSizes]
             }w.jpg`
           )
-          await sharp(`${directoryPath}/${files[indexFiles]}`)
-            .webp({ quality: 35 })
-            .toFile(
-              `${directoryPath}/${stripExtension(files[indexFiles])}-${
-                sizes[indexSizes]
-              }w.webp`
-            )
         }
       }
       console.log(await getFilesFromDir(directoryPath))
