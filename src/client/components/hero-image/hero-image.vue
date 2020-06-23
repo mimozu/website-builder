@@ -1,18 +1,13 @@
 <template>
   <section class="hero-image">
-    <picture>
-      <source
-        sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width: 768px) 800px, 600px"
-        :srcset="srcSet('webp')"
-        type="image/jpeg"
-      />
-      <source
-        sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width: 768px) 800px, 600px"
-        :srcset="srcSet('jpg')"
-        type="image/jpeg"
-      />
-      <img class="hero-image__img" :src="image.src" :alt="image.alt" />
-    </picture>
+    <img
+      class="hero-image__img"
+      :src="image.src"
+      :alt="image.alt"
+      sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width:
+      768px) 800px, 600px"
+      :srcset="srcSet('jpg')"
+    />
     <div class="hero-image__readable"></div>
 
     <div class="hero-image__content">
