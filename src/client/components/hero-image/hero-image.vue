@@ -1,18 +1,13 @@
 <template>
   <section class="hero-image">
-    <picture>
-      <source
-        sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width: 768px) 800px, 600px"
-        :srcset="srcSet('webp')"
-        type="image/jpeg"
-      />
-      <source
-        sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width: 768px) 800px, 600px"
-        :srcset="srcSet('jpg')"
-        type="image/jpeg"
-      />
-      <img class="hero-image__img" :src="image.src" :alt="image.alt" />
-    </picture>
+    <img
+      class="hero-image__img"
+      :src="image.src"
+      :alt="image.alt"
+      sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width:
+      768px) 800px, 600px"
+      :srcset="srcSetNetlifyLargeMedia"
+    />
     <div class="hero-image__readable"></div>
 
     <div class="hero-image__content">
@@ -34,13 +29,21 @@ export default {
       required: true
     }
   },
-  methods: {
-    srcSet(type) {
+  computed: {
+    srcSet() {
       return `
-        /images/uploads/${this.image.fileNameWithoutExtension}-600w.${type} 600w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-960w.${type} 960w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-1280w.${type} 1280w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-1920w.${type} 1920w
+        /images/uploads/${this.image.fileNameWithoutExtension}-600w.jpg 600w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-960w.jpg 960w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-1280w.jpg 1280w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-1920w.jpg 1920w
+      `
+    },
+    srcSetNetlifyLargeMedia() {
+      return `
+        ${this.image.src}?nf_resize=fit&w=600 600w,
+        ${this.image.src}?nf_resize=fit&w=960 960w,
+        ${this.image.src}?nf_resize=fit&w=1280 1280w,
+        ${this.image.src}?nf_resize=fit&w=1920 1920w
       `
     }
   }
@@ -89,6 +92,14 @@ export default {
   max-width: 270px;
   letter-spacing: 0.4px;
   color: #fff;
+}
+
+@media (max-height: 400px) {
+  .hero-image__readable,
+  .hero-image__img,
+  .hero-image__content {
+    height: 700px;
+  }
 }
 
 @media (min-width: 450px) {
