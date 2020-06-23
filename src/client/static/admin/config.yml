@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
   branch: master
+  commit_messages:
+    create: 'Create {{collection}}'
+    update: 'Update {{collection}}'
+    delete: 'Delete {{collection}}'
+    uploadMedia: '[skip ci] Upload "{{path}}"'
+    deleteMedia: '[skip ci] Delete "{{path}}""'
 site_url: https://uphill-5e1750c4.netlify.app
 display_url: https://uphill-5e1750c4.netlify.app
 logo_url: https://uphill-5e1750c4.netlify.app/images/logo.svg
