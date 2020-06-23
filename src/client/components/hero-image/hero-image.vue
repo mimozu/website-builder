@@ -40,10 +40,10 @@ export default {
     },
     srcSetNetlifyLargeMedia() {
       return `
-        ${this.image.src}.jpg?nf_resize=fit&w=600 600w,
-        ${this.image.src}.jpg?nf_resize=fit&w=960 960w,
-        ${this.image.src}.jpg?nf_resize=fit&w=1280 1280w,
-        ${this.image.src}.jpg?nf_resize=fit&w=1920 1920w
+        ${this.image.src}?nf_resize=fit&w=600 600w,
+        ${this.image.src}?nf_resize=fit&w=960 960w,
+        ${this.image.src}?nf_resize=fit&w=1280 1280w,
+        ${this.image.src}?nf_resize=fit&w=1920 1920w
       `
     }
   }
