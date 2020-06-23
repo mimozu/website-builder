@@ -6,7 +6,7 @@
       :alt="image.alt"
       sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width:
       768px) 800px, 600px"
-      :srcset="srcSet"
+      :srcset="srcSetNetlifyLargeMedia"
     />
     <div class="hero-image__readable"></div>
 
@@ -36,6 +36,14 @@ export default {
         /images/uploads/${this.image.fileNameWithoutExtension}-960w.jpg 960w,
         /images/uploads/${this.image.fileNameWithoutExtension}-1280w.jpg 1280w,
         /images/uploads/${this.image.fileNameWithoutExtension}-1920w.jpg 1920w
+      `
+    },
+    srcSetNetlifyLargeMedia() {
+      return `
+        /images/uploads/${this.image.src}.jpg?nf_resize=fit&w=600 600w,
+        /images/uploads/${this.image.src}.jpg?nf_resize=fit&w=960 960w,
+        /images/uploads/${this.image.src}.jpg?nf_resize=fit&w=1280 1280w,
+        /images/uploads/${this.image.src}.jpg?nf_resize=fit&w=1920 1920w
       `
     }
   }
