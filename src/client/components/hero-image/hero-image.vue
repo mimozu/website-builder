@@ -6,7 +6,7 @@
       :alt="image.alt"
       sizes="(min-width: 1440px) 1500px, (min-width: 1336px) 1340px,(min-width:
       768px) 800px, 600px"
-      :srcset="srcSet('jpg')"
+      :srcset="srcSet"
     />
     <div class="hero-image__readable"></div>
 
@@ -29,13 +29,13 @@ export default {
       required: true
     }
   },
-  methods: {
-    srcSet(type) {
+  computed: {
+    srcSet() {
       return `
-        /images/uploads/${this.image.fileNameWithoutExtension}-600w.${type} 600w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-960w.${type} 960w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-1280w.${type} 1280w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-1920w.${type} 1920w
+        /images/uploads/${this.image.fileNameWithoutExtension}-600w.jpg 600w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-960w.jpg 960w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-1280w.jpg 1280w,
+        /images/uploads/${this.image.fileNameWithoutExtension}-1920w.jpg 1920w
       `
     }
   }
