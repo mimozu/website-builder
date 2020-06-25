@@ -7,9 +7,9 @@ backend:
     delete: 'Delete {{collection}}'
     uploadMedia: '[skip ci] Upload "{{path}}"'
     deleteMedia: '[skip ci] Delete "{{path}}""'
-site_url: https://uphill-5e1750c4.netlify.app
-display_url: https://uphill-5e1750c4.netlify.app
-logo_url: https://uphill-5e1750c4.netlify.app/images/logo.svg
+site_url: uphill-coaching-a43b72
+display_url: uphill-coaching-a43b72
+logo_url: uphill-coaching-a43b72/images/logo.svg
 media_folder: 'src/client/static/images/uploads'
 public_folder: '/images/uploads'
 collections:
