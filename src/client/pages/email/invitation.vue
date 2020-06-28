@@ -9,3 +9,7 @@
     <p><a href="/admin/#invite_token={{ .Token }}">Accept the invite</a></p>
   </div>
 </template>
+
+<script>
+export default {}
+</script>
