@@ -7,7 +7,9 @@
       {{ email }} to {{ newEmail }}:
     </p>
     <p>
-      <a href="`${siteUrl}/admin/#email_change_token=${token}`">Change Email</a>
+      <a :href="`${siteUrl}/admin/#email_change_token=${token}`"
+        >Change Email</a
+      >
     </p>
   </div>
 </template>
