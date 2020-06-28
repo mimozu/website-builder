@@ -6,7 +6,9 @@
       You have been invited to create a user on {{ siteUrl }}. Follow this link
       to accept the invite:
     </p>
-    <p><a :href="`/admin/#invite_token=${token}`">Accept the invite</a></p>
+    <p>
+      <a :href="`${siteUrl}/admin/#invite_token=${token}`">Accept the invite</a>
+    </p>
   </div>
 </template>
 
