@@ -4,7 +4,7 @@
 
     <p>Follow this link to confirm your user:</p>
     <p>
-      <a href="{{{ .SiteURL }}}/admin/#confirmation_token={{{ .Token }}}"
+      <a href="`${siteUrl}/admin/#confirmation_token=${token}`"
         >Confirm your mail</a
       >
     </p>
@@ -12,5 +12,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    siteUrl() {
+      return '{{ .SiteURL }}'
+    },
+    token() {
+      return '{{ .Token }}'
+    }
+  }
+}
 </script>

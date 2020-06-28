@@ -4,13 +4,20 @@
 
     <p>Follow this link to reset the password for your user:</p>
     <p>
-      <a href="{{{ .SiteURL }}}/admin/#recovery_token={{{ .Token }}}"
-        >Reset Password</a
-      >
+      <a href="`${siteUrl}/admin/#recovery_token=${token}`">Reset Password</a>
     </p>
-  </div></template
->
+  </div>
+</template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    siteUrl() {
+      return '{{ .SiteURL }}'
+    },
+    token() {
+      return '{{ .Token }}'
+    }
+  }
+}
 </script>

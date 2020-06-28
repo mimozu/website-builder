@@ -3,17 +3,30 @@
     <h2>Confirm Change of Email</h2>
 
     <p>
-      Follow this link to confirm the update of your email from {{{ .Email }}}
-      to {{{ .NewEmail }}}:
+      Follow this link to confirm the update of your email from
+      {{ email }} to {{ newEmail }}:
     </p>
     <p>
-      <a href="{{{ .SiteURL }}}/admin/#email_change_token={{{ .Token }}}"
-        >Change Email</a
-      >
+      <a href="`${siteUrl}/admin/#email_change_token=${token}`">Change Email</a>
     </p>
-  </div></template
->
+  </div>
+</template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    email() {
+      return '{{ .Email }}'
+    },
+    newEmail() {
+      return '{{ .NewEmail }}'
+    },
+    siteUrl() {
+      return '{{ .SiteURL }}'
+    },
+    token() {
+      return '{{ .Token }}'
+    }
+  }
+}
 </script>
