@@ -15,7 +15,7 @@ intro: >-
 
   Are you ready for your new life, where you **trust your own judgement,** have **control** over any situation and you'll end up with a **new identity**?
 buttontext: Let's take up your challenge!
-buttonemailaddress: hello@uphill-coaching.com
+buttonemailaddress: hello@uphill-coaching-example.com
 socialmedia:
   - platform: instagram
     username: bladibla
