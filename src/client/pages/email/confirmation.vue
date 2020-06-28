@@ -2,9 +2,11 @@
   <div>
     <h2>Confirm your signup</h2>
 
+    {{ siteUrl }}
+
     <p>Follow this link to confirm your user:</p>
     <p>
-      <a href="`${siteUrl}/admin/#confirmation_token=${token}`"
+      <a :href="`${siteUrl}/admin/#confirmation_token=${token}`"
         >Confirm your mail</a
       >
     </p>

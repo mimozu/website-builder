@@ -4,7 +4,7 @@
 
     <p>Follow this link to reset the password for your user:</p>
     <p>
-      <a href="`${siteUrl}/admin/#recovery_token=${token}`">Reset Password</a>
+      <a :href="`${siteUrl}/admin/#recovery_token=${token}`">Reset Password</a>
     </p>
   </div>
 </template>
