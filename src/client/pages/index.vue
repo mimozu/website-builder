@@ -119,7 +119,7 @@ export default {
   }
 
   .page-introduction__content {
-    margin-bottom: 120px;
+    margin-bottom: 108px;
   }
 }
 

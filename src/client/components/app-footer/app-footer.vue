@@ -78,8 +78,8 @@ export default {
   flex: 0 0 60px;
 }
 
-.app-footer__list-item:not(:first-child) {
-  margin-left: 24px;
+.app-footer__item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .app-footer__link {
