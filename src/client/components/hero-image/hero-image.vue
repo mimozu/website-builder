@@ -32,11 +32,16 @@ export default {
   computed: {
     srcSet() {
       return `
-        /images/uploads/${this.image.fileNameWithoutExtension}-600w.jpg 600w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-960w.jpg 960w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-1280w.jpg 1280w,
-        /images/uploads/${this.image.fileNameWithoutExtension}-1920w.jpg 1920w
+        ${this.image.src}${this.largeMediaOptions(600)} 600w,
+        ${this.image.src}${this.largeMediaOptions(960)} 960w,
+        ${this.image.src}${this.largeMediaOptions(1280)} 1280w,
+        ${this.image.src}${this.largeMediaOptions(1920)} 1920w
       `
+    }
+  },
+  methods: {
+    largeMediaOptions(width) {
+      return `?nf_resize=fit&w=${width}`
     }
   }
 }
