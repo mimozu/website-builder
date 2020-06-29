@@ -79,7 +79,7 @@ export default {
 }
 
 .app-footer__item:not(:first-child) {
-  margin-left: 30px;
+  margin-left: 24px;
 }
 
 .app-footer__link {
