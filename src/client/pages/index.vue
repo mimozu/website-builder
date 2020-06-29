@@ -70,11 +70,9 @@ export default {
   letter-spacing: 0.5px;
   border: 1px solid rgb(28, 28, 28);
   text-decoration: none;
-  transition: transform 0.3s ease;
 }
 
 .button:hover {
-  transform: scale(1.1);
   color: #fff;
   background-color: #000;
 }
@@ -122,6 +120,16 @@ export default {
 
   .page-introduction__content {
     margin-bottom: 120px;
+  }
+}
+
+@media (min-width: 820px) {
+  .button {
+    transition: transform 0.3s ease;
+  }
+
+  .button:hover {
+    transform: scale(1.1);
   }
 }
 </style>
