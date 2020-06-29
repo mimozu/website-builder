@@ -1,27 +1,25 @@
 <template>
-  <footer class="app-footer">
-    <ul class="app-footer__list">
-      <li
-        v-for="(item, index) in socialmedia"
-        :key="index"
-        class="app-footer__list-item"
+  <ul class="app-footer">
+    <li
+      v-for="(item, index) in socialmedia"
+      :key="index"
+      class="app-footer__item"
+    >
+      <a
+        class="app-footer__link"
+        :href="platformUrl(item.platform, item.username)"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <a
-          class="app-footer__link"
-          :href="platformUrl(item.platform, item.username)"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <icon-base
-            width="36"
-            height="36"
-            viewbox="0 0 24 24"
-            :icon-name="item.platform"
-            ><component :is="`icon-${item.platform}`"></component></icon-base
-        ></a>
-      </li>
-    </ul>
-  </footer>
+        <icon-base
+          width="36"
+          height="36"
+          viewbox="0 0 24 24"
+          :icon-name="item.platform"
+          ><component :is="`icon-${item.platform}`"></component></icon-base
+      ></a>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -70,13 +68,13 @@ export default {
 </script>
 
 <style>
-.app-footer__list {
+.app-footer {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
 
-.app-footer__list-item {
+.app-footer__item {
   flex: 0 0 60px;
 }
 
