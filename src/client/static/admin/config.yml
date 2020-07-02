@@ -98,4 +98,4 @@ collections:
             label: Description for search engines
             widget: text
             pattern: ['ˆ.{155}$', 'Maximum is 155 characters']
-            hint: 'This text is shown in the search results of a search engine like e.g. Google or DuckDuckGo. Maximum length is 155.'
+            hint: 'This text is shown in the search results of a search engine like e.g. Google or DuckDuckGo. Maximum length is 155. More information: https://yoast.com/meta-descriptions/'
