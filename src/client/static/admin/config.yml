@@ -94,3 +94,8 @@ collections:
                   widget: string,
                   hint: 'If your url is e.g. https://instagram.com/sitebuilder, than your username is sitebuilder.',
                 }
+          - name: searchenginedescription
+            label: Description for search engines
+            widget: text
+            pattern: ['ˆ.{155}$']
+            hint: 'This text is shown in the search results of a search engine like e.g. Google or DuckDuckGo.'
