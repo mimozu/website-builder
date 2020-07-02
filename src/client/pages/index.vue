@@ -54,6 +54,13 @@ export default {
       console.error(error)
       return false
     }
+  },
+  head() {
+    return {
+      meta: [
+        { name: 'description', content: this.page.searchenginedescription }
+      ]
+    }
   }
 }
 </script>
