@@ -23,4 +23,5 @@ socialmedia:
     username: bladibla
   - platform: facebook
     username: bladibla
+searchenginedescription: Can you handle your biggest **challenge**? Let's take up the challenge!
 ---
