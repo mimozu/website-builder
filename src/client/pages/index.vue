@@ -58,7 +58,11 @@ export default {
   head() {
     return {
       meta: [
-        { name: 'description', content: this.page.searchenginedescription }
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.page.searchenginedescription
+        }
       ]
     }
   }
