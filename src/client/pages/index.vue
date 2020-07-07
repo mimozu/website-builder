@@ -54,17 +54,6 @@ export default {
       console.error(error)
       return false
     }
-  },
-  head() {
-    return {
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.page.searchenginedescription
-        }
-      ]
-    }
   }
 }
 </script>
