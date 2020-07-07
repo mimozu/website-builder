@@ -54,25 +54,6 @@ export default {
       console.error(error)
       return false
     }
-  },
-  head() {
-    return {
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.page.searchenginedescription
-        }
-      ],
-      link: [
-        {
-          rel: 'preload',
-          href: this.page.image.src,
-          as: 'image',
-          importance: 'high'
-        }
-      ]
-    }
   }
 }
 </script>

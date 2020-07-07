@@ -1,3 +1,20 @@
+const vfile = require('to-vfile')
+const matter = require('vfile-matter')
+
+const frontmatter = vfile.readSync('./src/client/content/homepage.md')
+matter(frontmatter)
+
+console.log('env var', process.env.NETLIFY_URL)
+console.log('FILE', frontmatter)
+
+const {
+  data: {
+    matter: { sitetitle, file: filesrc, searchenginedescription }
+  }
+} = frontmatter
+const ogImage = `${process.env.NETLIFY_URL}${filesrc}`
+console.log(sitetitle, filesrc, searchenginedescription, ogImage)
+
 export default {
   mode: 'universal',
   /*
@@ -13,21 +30,18 @@ export default {
   },
   srcDir: 'src/client',
   generate: {},
-  /*
-   ** Headers of the page
-   */
-  head: {
-    title: process.env.npm_package_name || '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
+  pwa: {
+    icon: {
+      iconSrc: filesrc
+    },
+    meta: {
+      name: sitetitle,
+      description: searchenginedescription,
+      ogHost: process.env.NETLIFY_URL,
+      ogImage: {
+        path: filesrc
       }
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    }
   },
   /*
    ** Customize the progress-bar color
@@ -48,7 +62,9 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    // Doc: https://github.com/nuxt-community/pwa-module
+    '@nuxtjs/pwa'
   ],
   /*
    ** Nuxt.js modules
