@@ -63,13 +63,6 @@ export default {
           name: 'description',
           content: this.page.searchenginedescription
         }
-      ],
-      link: [
-        {
-          rel: 'preload',
-          href: this.page.image.src,
-          as: 'image'
-        }
       ]
     }
   }
