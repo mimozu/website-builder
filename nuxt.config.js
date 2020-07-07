@@ -31,6 +31,9 @@ export default {
   srcDir: 'src/client',
   generate: {},
   pwa: {
+    icon: {
+      iconSrc: filesrc
+    },
     meta: {
       name: sitetitle,
       description: searchenginedescription,
