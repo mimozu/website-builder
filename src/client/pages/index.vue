@@ -68,8 +68,7 @@ export default {
         {
           rel: 'preload',
           href: this.page.image.src,
-          as: 'image',
-          importance: 'high'
+          as: 'image'
         }
       ]
     }
