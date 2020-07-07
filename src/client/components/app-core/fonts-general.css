@@ -23,19 +23,3 @@
   font-style: normal;
   font-weight: 600;
 }
-
-@font-face {
-  font-family: 'Cooper Hewitt';
-  src: url('/fonts/cooper-hewitt-book-400.woff2') format('woff2'),
-    url('/fonts/cooper-hewitt-book-400.woff') format('woff');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Cooper Hewitt';
-  src: url('/fonts/cooper-hewitt-medium-500.woff2') format('woff2'),
-    url('/fonts/cooper-hewitt-medium-500.woff') format('woff');
-  font-style: normal;
-  font-weight: 500;
-}
