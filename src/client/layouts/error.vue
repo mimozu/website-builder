@@ -15,9 +15,7 @@ export default {
       type: Object,
       default: null
     }
-  },
-  layout: 'default'
-}
+  }
 </script>
 
 <style>
