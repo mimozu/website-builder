@@ -4,9 +4,6 @@ const matter = require('vfile-matter')
 const frontmatter = vfile.readSync('./src/client/content/homepage.md')
 matter(frontmatter)
 
-console.log('env var', process.env.NETLIFY_URL)
-console.log('FILE', frontmatter)
-
 const {
   data: {
     matter: { sitetitle, file: filesrc, searchenginedescription }
