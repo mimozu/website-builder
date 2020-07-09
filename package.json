@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.4.1",
-    "@nuxtjs/axios": "^5.11.0",
     "marked": "^1.1.0",
     "nuxt": "^2.13.3",
     "to-vfile": "^6.1.0",
