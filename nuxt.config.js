@@ -4,9 +4,6 @@ const matter = require('vfile-matter')
 const frontmatter = vfile.readSync('./src/client/content/homepage.md')
 matter(frontmatter)
 
-console.log('env var', process.env.NETLIFY_URL)
-console.log('FILE', frontmatter)
-
 const {
   data: {
     matter: { sitetitle, file: filesrc, searchenginedescription }
@@ -17,6 +14,8 @@ console.log(sitetitle, filesrc, searchenginedescription, ogImage)
 
 export default {
   mode: 'universal',
+  // default: 'server'
+  target: 'static',
   /*
    ** https://github.com/nuxt/components
    */
@@ -29,7 +28,9 @@ export default {
     baseURL: process.env.BASE_URL
   },
   srcDir: 'src/client',
-  generate: {},
+  generate: {
+    fallback: true
+  },
   pwa: {
     icon: {
       iconSrc: filesrc

@@ -23,7 +23,6 @@
 
 <script>
 import marked from 'marked'
-import { stripFileExtension } from '../lib/strip-file-extension.js'
 
 export default {
   async asyncData({ $content, params }) {
@@ -43,7 +42,6 @@ export default {
         src: page.file,
         path: getPath(page.file),
         fileName: getFileName(page.file),
-        fileNameWithoutExtension: stripFileExtension(getFileName(page.file)),
         alt: page.filedescription
       }
 
