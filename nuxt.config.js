@@ -28,7 +28,9 @@ export default {
     baseURL: process.env.BASE_URL
   },
   srcDir: 'src/client',
-  generate: {},
+  generate: {
+    fallback: true
+  },
   pwa: {
     icon: {
       iconSrc: filesrc
