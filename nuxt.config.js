@@ -17,6 +17,8 @@ console.log(sitetitle, filesrc, searchenginedescription, ogImage)
 
 export default {
   mode: 'universal',
+  // default: 'server'
+  target: 'static',
   /*
    ** https://github.com/nuxt/components
    */
