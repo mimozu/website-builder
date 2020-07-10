@@ -20,6 +20,19 @@ collections:
     editor:
       preview: false
     files:
+      - label: 'Settings'
+        name: settings
+        file: '/src/client/content/settings.md'
+        preview_path: '/'
+        fields:
+          - {
+              label: Favicon,
+              name: favicon,
+              widget: file,
+              default: '/images/uploads/icon.png',
+              allow_multiple: false,
+              hint: 'An icon that is shown in your browser, mobile or desktop. Upload a square PNG icon that is 512x512 pixels.',
+            }
       - label: 'Homepage'
         name: 'homepage'
         description: 'A description of the homepage'

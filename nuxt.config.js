@@ -16,10 +16,6 @@ export default {
   mode: 'universal',
   // default: 'server'
   target: 'static',
-  /*
-   ** https://github.com/nuxt/components
-   */
-  components: true,
   // server: {
   //   port: '8000',
   //   host: '0.0.0.0'
@@ -28,12 +24,16 @@ export default {
     baseURL: process.env.BASE_URL
   },
   srcDir: 'src/client',
+  /*
+   ** https://github.com/nuxt/components
+   */
+  components: true,
   generate: {
     fallback: true
   },
   pwa: {
     icon: {
-      iconSrc: filesrc
+      iconSrc: 'src/client/static/uploads/icon.png'
     },
     meta: {
       name: sitetitle,
