@@ -10,9 +10,6 @@ backend:
 site_url: https://uphill-coaching.netlify.app
 display_url: https://uphill-coaching.netlify.app
 media_folder: 'src/client/static/images/uploads'
-media_library:
-  name: cloudinary
-  output_filename_only: false
 public_folder: '/images/uploads'
 collections:
   - label: 'Pages'
