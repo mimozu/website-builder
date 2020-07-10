@@ -1,3 +1,3 @@
 ---
-favicon: /images/uploads/icon.png
+favicon: /images/uploads/favicon.png
 ---
