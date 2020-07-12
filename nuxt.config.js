@@ -1,7 +1,8 @@
 const vfile = require('to-vfile')
 const matter = require('vfile-matter')
-
 const frontmatter = vfile.readSync('./src/client/content/homepage.md')
+const settingsData = require('./src/client/static/data/settings.json')
+const { favicon } = settingsData
 matter(frontmatter)
 
 const {
@@ -10,7 +11,7 @@ const {
   }
 } = frontmatter
 const ogImage = `${process.env.NETLIFY_URL}${filesrc}`
-console.log(sitetitle, filesrc, searchenginedescription, ogImage)
+// console.log(sitetitle, filesrc, searchenginedescription, ogImage)
 
 export default {
   mode: 'universal',
@@ -33,7 +34,7 @@ export default {
   },
   pwa: {
     icon: {
-      iconSrc: 'src/client/static/uploads/icon.png'
+      iconSrc: favicon
     },
     meta: {
       name: sitetitle,
