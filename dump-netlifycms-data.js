@@ -9,8 +9,8 @@ async function main() {
     await convertMarkdownToJson('src/client/content/homepage.md')
   )
 
-  await writeJsonToFile('./src/client/static/data/settings.json', settingsJson)
-  await writeJsonToFile('./src/client/static/data/homepage.json', homepageJson)
+  await writeJsonToFile('./src/client/static/settings.json', settingsJson)
+  await writeJsonToFile('./src/client/static/homepage.json', homepageJson)
 }
 
 main()

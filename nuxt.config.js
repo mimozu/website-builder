@@ -1,9 +1,11 @@
 const vfile = require('to-vfile')
 const matter = require('vfile-matter')
 const frontmatter = vfile.readSync('./src/client/content/homepage.md')
-const settingsData = require('./src/client/static/data/settings.json')
+const settingsData = require('./src/client/static/settings.json')
 const { favicon } = settingsData
 matter(frontmatter)
+
+console.log(favicon)
 
 const {
   data: {
