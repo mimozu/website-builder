@@ -10,11 +10,13 @@
   },
   "scripts": {
     "dev": "nuxt",
+    "prebuild": "npm run data",
     "build": "nuxt build",
     "start": "nuxt start",
     "pregenerate": "npm run build",
     "generate": "nuxt export",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "data": "node ./dump-netlifycms-data.js"
   },
   "dependencies": {
     "@nuxt/content": "^1.4.1",

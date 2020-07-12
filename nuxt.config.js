@@ -1,8 +1,11 @@
 const vfile = require('to-vfile')
 const matter = require('vfile-matter')
-
 const frontmatter = vfile.readSync('./src/client/content/homepage.md')
+const settingsData = require('./src/client/static/settings.json')
+const { favicon } = settingsData
 matter(frontmatter)
+
+console.log(favicon)
 
 const {
   data: {
@@ -10,16 +13,12 @@ const {
   }
 } = frontmatter
 const ogImage = `${process.env.NETLIFY_URL}${filesrc}`
-console.log(sitetitle, filesrc, searchenginedescription, ogImage)
+// console.log(sitetitle, filesrc, searchenginedescription, ogImage)
 
 export default {
   mode: 'universal',
   // default: 'server'
   target: 'static',
-  /*
-   ** https://github.com/nuxt/components
-   */
-  components: true,
   // server: {
   //   port: '8000',
   //   host: '0.0.0.0'
@@ -28,12 +27,16 @@ export default {
     baseURL: process.env.BASE_URL
   },
   srcDir: 'src/client',
+  /*
+   ** https://github.com/nuxt/components
+   */
+  components: true,
   generate: {
     fallback: true
   },
   pwa: {
     icon: {
-      iconSrc: filesrc
+      iconSrc: favicon
     },
     meta: {
       name: sitetitle,

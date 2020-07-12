@@ -10,9 +10,6 @@ backend:
 site_url: https://uphill-coaching.netlify.app
 display_url: https://uphill-coaching.netlify.app
 media_folder: 'src/client/static/images/uploads'
-media_library:
-  name: cloudinary
-  output_filename_only: false
 public_folder: '/images/uploads'
 collections:
   - label: 'Pages'
@@ -20,6 +17,19 @@ collections:
     editor:
       preview: false
     files:
+      - label: 'Settings'
+        name: settings
+        file: '/src/client/content/settings.md'
+        preview_path: '/'
+        fields:
+          - {
+              label: Favicon,
+              name: favicon,
+              widget: file,
+              default: '/images/uploads/icon.png',
+              allow_multiple: false,
+              hint: 'An icon that is shown in your browser, mobile or desktop. Upload a square PNG icon that is 512x512 pixels.',
+            }
       - label: 'Homepage'
         name: 'homepage'
         description: 'A description of the homepage'
