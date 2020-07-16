@@ -45,6 +45,10 @@ export default {
       ogImage: {
         path: filesrc
       }
+    },
+    manifest: {
+      name: sitetitle,
+      start_url: '/?homescreen=true'
     }
   },
   /*
