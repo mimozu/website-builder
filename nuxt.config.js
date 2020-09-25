@@ -39,9 +39,7 @@ export default {
       name: sitetitle,
       description: searchenginedescription,
       ogHost: process.env.NETLIFY_URL,
-      ogImage: {
-        path: filesrc
-      }
+      ogImage: filesrc
     }
   },
   /*
