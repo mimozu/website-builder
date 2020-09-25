@@ -16,7 +16,6 @@ const ogImage = `${process.env.NETLIFY_URL}${filesrc}`
 // console.log(sitetitle, filesrc, searchenginedescription, ogImage)
 
 export default {
-  mode: 'universal',
   // default: 'server'
   target: 'static',
   // server: {
