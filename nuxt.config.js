@@ -31,7 +31,7 @@ export default {
   },
   pwa: {
     icon: {
-      iconSrc: `src/client/static${favicon}`
+      source: `src/client/static${favicon}`
     },
     meta: {
       name: sitetitle,
