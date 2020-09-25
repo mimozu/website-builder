@@ -12,15 +12,7 @@ const {
 } = frontmatter
 
 export default {
-  // default: 'server'
   target: 'static',
-  // server: {
-  //   port: '8000',
-  //   host: '0.0.0.0'
-  // },
-  publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL
-  },
   srcDir: 'src/client',
   /*
    ** https://github.com/nuxt/components
@@ -34,10 +26,12 @@ export default {
       source: `src/client/static${favicon}`
     },
     meta: {
-      name: sitetitle,
       description: searchenginedescription,
       ogHost: process.env.NETLIFY_URL,
       ogImage: filesrc
+    },
+    manifest: {
+      name: sitetitle
     }
   },
   /*
