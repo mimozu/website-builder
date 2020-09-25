@@ -5,15 +5,11 @@ const settingsData = require('./src/client/static/settings.json')
 const { favicon } = settingsData
 matter(frontmatter)
 
-console.log(favicon)
-
 const {
   data: {
     matter: { sitetitle, file: filesrc, searchenginedescription }
   }
 } = frontmatter
-const ogImage = `${process.env.NETLIFY_URL}${filesrc}`
-// console.log(sitetitle, filesrc, searchenginedescription, ogImage)
 
 export default {
   // default: 'server'
