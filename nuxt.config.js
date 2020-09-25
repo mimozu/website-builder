@@ -5,8 +5,6 @@ const settingsData = require('./src/client/static/settings.json')
 const { favicon } = settingsData
 matter(frontmatter)
 
-console.log('process.env.NETLIFY_URL', process.env.NETLIFY_URL)
-
 const {
   data: {
     matter: { sitetitle, file: filesrc, searchenginedescription }
