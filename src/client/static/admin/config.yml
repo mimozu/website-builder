@@ -10,6 +10,14 @@ backend:
 site_url: https://uphill-coaching.netlify.app
 display_url: https://uphill-coaching.netlify.app
 media_folder: 'src/client/static/images/uploads'
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: 'dlsvtbju7'
+    api_key: '825543594531569'
+    default_transformations:
+      - - fetch_format: auto
+          quality: auto
 public_folder: '/images/uploads'
 collections:
   - label: 'Pages'
