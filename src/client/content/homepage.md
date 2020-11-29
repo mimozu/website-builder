@@ -1,6 +1,6 @@
 ---
 sitetitle: Uphill Coaching
-file: /images/uploads/jump.jpg
+file: https://res.cloudinary.com/dlsvtbju7/image/upload/f_auto,q_auto/v1606682913/mimozu/fatih-altas-ppzbzmpdqqg-unsplash.jpg
 filedescription: Photo by Remi Jacquaint
 tagline: Can you **handle** your biggest **challenge**?
 intro: >-
