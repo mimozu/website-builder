@@ -18,10 +18,10 @@ buttontext: Let's take up your challenge!
 buttonemailaddress: hello@uphill-coaching-example.com
 socialmedia:
   - platform: instagram
-    username: bladibla
+    username: sometestusername
   - platform: twitter
-    username: bladibla
+    username: sometestusername
   - platform: facebook
-    username: bladibla
+    username: sometestusername
 searchenginedescription: Let's take on your biggest challenge!
 ---
